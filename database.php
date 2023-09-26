@@ -1,5 +1,5 @@
 <?php
-// Database Connection Code
+// Database Connection Logic
 
 $host = "localhost";
 $dbname = "palette_paradise";
