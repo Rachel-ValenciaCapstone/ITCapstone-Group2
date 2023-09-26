@@ -8,6 +8,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $password_confirm = $_POST['password_confirm'];
+
+    // Check if the entered passwords match
+    if ($password !== $password_confirm) {
+        $_SESSION['error'] = "Passwords do not match. Please try again.";
+        header("Location: register.php");
+        exit;
+    }
+
+      // Password complexity requirements using regular expressions
+    $password_pattern = "/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{8,}$/";
+
+    if (!preg_match($password_pattern, $password)) {
+        $_SESSION['error'] = "Password must contain at least one uppercase letter, one lowercase letter, one number, one symbol, and be at least 8 characters long.";
+        header("Location: register.php");
+        exit;
+    }
 
     // Hash the user's password for secure storage
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
