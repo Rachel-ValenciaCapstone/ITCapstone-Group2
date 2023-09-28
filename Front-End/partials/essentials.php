@@ -12,10 +12,10 @@
             </div>
             <h4>$7</h4>
         </div>
-    <a href="#">
+    <!-- <a href="#">
         <i class="material-symbols-rounded cart">shopping_cart</i>
         <i class="material-symbols-rounded add">add_circle</i>
-    </a>
+    </a> -->
     </div>
     <div class="pro" id="shrink-border">
         <img src="img/products/pen 2.jpg" alt="ARTLINE Drawing System Set of 4 ( 0.1, 0.3, 05, 0.7 ) 4PSH1">
@@ -30,10 +30,10 @@
             </div>
             <h4>$11</h4>
         </div>
-    <a href="#">
+    <!-- <a href="#">
         <i class="material-symbols-rounded cart">shopping_cart</i>
         <i class="material-symbols-rounded add">add_circle</i>
-    </a>
+    </a> -->
     </div>
     <div class="pro" id="shrink-border">
         <img src="img/products/acrylic 1a.jpg" alt="Acrylic Gouache Set Primaries">
@@ -48,10 +48,10 @@
             </div>
             <h4>$75</h4>
         </div>
-    <a href="#">
+    <!-- <a href="#">
         <i class="material-symbols-rounded cart">shopping_cart</i>
         <i class="material-symbols-rounded add">add_circle</i>
-    </a>
+    </a> -->
     </div>
     <div class="pro" id="shrink-border">
         <img src="img/products/oil 1.jpg" alt="Blick Studio Oil Colors">
@@ -66,10 +66,10 @@
             </div>
             <h4>$35</h4>
         </div>
-    <a href="#">
+    <!-- <a href="#">
         <i class="material-symbols-rounded cart">shopping_cart</i>
         <i class="material-symbols-rounded add">add_circle</i>
-    </a>
+    </a> -->
     </div>
     <div class="pro" id="shrink-border">
         <img src="img/products/palette 1.jpg" alt="Blick Palette Paper">
@@ -84,9 +84,9 @@
             </div>
             <h4>$23</h4>
         </div>
-    <a href="#">
+    <!-- <a href="#">
         <i class="material-symbols-rounded cart">shopping_cart</i>
         <i class="material-symbols-rounded add">add_circle</i>
-    </a>
+    </a> -->
     </div>
 </div>
