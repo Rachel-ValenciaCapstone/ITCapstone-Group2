@@ -1,5 +1,5 @@
 <div class="pro-container">
-    <div class="pro" id="shrink-border">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
         <img src="img/products/pencil 1.jpg" alt="Kalour Professional Sketching Pencils 12pc">
         <div class="des">
             <span>kalour</span>
@@ -17,7 +17,7 @@
         <i class="material-symbols-rounded add">add_circle</i>
     </a> -->
     </div>
-    <div class="pro" id="shrink-border">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
         <img src="img/products/pen 2.jpg" alt="ARTLINE Drawing System Set of 4 ( 0.1, 0.3, 05, 0.7 ) 4PSH1">
         <div class="des">
             <span>artline</span>
@@ -35,7 +35,7 @@
         <i class="material-symbols-rounded add">add_circle</i>
     </a> -->
     </div>
-    <div class="pro" id="shrink-border">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
         <img src="img/products/acrylic 1a.jpg" alt="Acrylic Gouache Set Primaries">
         <div class="des">
             <span>liquitex</span>
@@ -53,7 +53,7 @@
         <i class="material-symbols-rounded add">add_circle</i>
     </a> -->
     </div>
-    <div class="pro" id="shrink-border">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
         <img src="img/products/oil 1.jpg" alt="Blick Studio Oil Colors">
         <div class="des">
             <span>blick studio</span>
@@ -71,7 +71,7 @@
         <i class="material-symbols-rounded add">add_circle</i>
     </a> -->
     </div>
-    <div class="pro" id="shrink-border">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
         <img src="img/products/palette 1.jpg" alt="Blick Palette Paper">
         <div class="des">
             <span>blick studio</span>
