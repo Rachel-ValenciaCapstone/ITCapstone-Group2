@@ -17,7 +17,7 @@
         <i class="material-symbols-rounded add">add_circle</i>
     </a> -->
     </div>
-    <div class="pro button-30" id="shrink-border">
+    <div class="pro button-30" id="shrink-border" onclick="window.location.href='sprod.php';">
         <img src="img/products/pen 2.jpg" alt="ARTLINE Drawing System Set of 4 ( 0.1, 0.3, 05, 0.7 ) 4PSH1">
         <div class="des">
             <span>artline</span>
