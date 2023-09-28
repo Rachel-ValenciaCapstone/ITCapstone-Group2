@@ -12,10 +12,10 @@
             </div>
             <h4>$7</h4>
         </div>
-    <a href="#">
+    <!-- <a href="#">
         <i class="material-symbols-rounded cart">shopping_cart</i>
         <i class="material-symbols-rounded add">add_circle</i>
-    </a>
+    </a> -->
     </div>
     <div class="pro button-30" id="shrink-border">
         <img src="img/products/pen 2.jpg" alt="ARTLINE Drawing System Set of 4 ( 0.1, 0.3, 05, 0.7 ) 4PSH1">
@@ -30,12 +30,12 @@
             </div>
             <h4>$11</h4>
         </div>
-    <a href="#">
+    <!-- <a href="#">
         <i class="material-symbols-rounded cart">shopping_cart</i>
         <i class="material-symbols-rounded add">add_circle</i>
-    </a>
+    </a> -->
     </div>
-    <div class="pro" id="shrink-border">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
         <img src="img/products/acrylic 1a.jpg" alt="Acrylic Gouache Set Primaries">
         <div class="des">
             <span>liquitex</span>
@@ -48,12 +48,12 @@
             </div>
             <h4>$75</h4>
         </div>
-    <a href="#">
+    <!-- <a href="#">
         <i class="material-symbols-rounded cart">shopping_cart</i>
         <i class="material-symbols-rounded add">add_circle</i>
-    </a>
+    </a> -->
     </div>
-    <div class="pro" id="shrink-border">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
         <img src="img/products/oil 1.jpg" alt="Blick Studio Oil Colors">
         <div class="des">
             <span>blick studio</span>
@@ -66,12 +66,12 @@
             </div>
             <h4>$35</h4>
         </div>
-    <a href="#">
+    <!-- <a href="#">
         <i class="material-symbols-rounded cart">shopping_cart</i>
         <i class="material-symbols-rounded add">add_circle</i>
-    </a>
+    </a> -->
     </div>
-    <div class="pro" id="shrink-border">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
         <img src="img/products/palette 1.jpg" alt="Blick Palette Paper">
         <div class="des">
             <span>blick studio</span>
@@ -84,12 +84,12 @@
             </div>
             <h4>$23</h4>
         </div>
-    <a href="#">
+    <!-- <a href="#">
         <i class="material-symbols-rounded cart">shopping_cart</i>
         <i class="material-symbols-rounded add">add_circle</i>
-    </a>
+    </a> -->
     </div>
-    <div class="pro" id="shrink-border">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
         <img src="img/products/sketchbook 1.jpg" alt="Canson XL Mix Media Paper">
         <div class="des">
             <span>canson</span>
@@ -102,12 +102,12 @@
             </div>
             <h4>$9</h4>
         </div>
-    <a href="#">
+    <!-- <a href="#">
         <i class="material-symbols-rounded cart">shopping_cart</i>
         <i class="material-symbols-rounded add">add_circle</i>
-    </a>
+    </a> -->
     </div>
-    <div class="pro" id="shrink-border">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
         <img src="img/products/brush 1.jpg" alt="Utrecht Natural Chungking Pure Bristle Brush ">
         <div class="des">
             <span>utrecht</span>
@@ -120,12 +120,12 @@
             </div>
             <h4>$43</h4>
         </div>
-    <a href="#">
+    <!-- <a href="#">
         <i class="material-symbols-rounded cart">shopping_cart</i>
         <i class="material-symbols-rounded add">add_circle</i>
-    </a>
+    </a> -->
     </div>
-    <div class="pro" id="shrink-border">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
         <img src="img/products/palette knives 1.jpg" alt="Blick Painting Knife Set">
         <div class="des">
             <span>blick studio</span>
@@ -138,12 +138,12 @@
             </div>
             <h4>$37</h4>
         </div>
-    <a href="#">
+    <!-- <a href="#">
         <i class="material-symbols-rounded cart">shopping_cart</i>
         <i class="material-symbols-rounded add">add_circle</i>
-    </a>
+    </a> -->
     </div>
-    <div class="pro" id="shrink-border">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
         <img src="img/products/easel 1.jpg" alt="MEEDEN Forward Tilt Floor Easel">
         <div class="des">
             <span>meeden</span>
@@ -156,12 +156,12 @@
             </div>
             <h4>$99</h4>
         </div>
-    <a href="#">
+    <!-- <a href="#">
         <i class="material-symbols-rounded cart">shopping_cart</i>
         <i class="material-symbols-rounded add">add_circle</i>
-    </a>
+    </a> -->
     </div>
-    <div class="pro" id="shrink-border">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
         <img src="img/products/canvas 1.jpg" alt="MEEDEN 15-Pack Canvas Boards for Painting">
         <div class="des">
             <span>meeden</span>
@@ -174,9 +174,9 @@
             </div>
             <h4>$19</h4>
         </div>
-    <a href="#">
+    <!-- <a href="#">
         <i class="material-symbols-rounded cart">shopping_cart</i>
         <i class="material-symbols-rounded add">add_circle</i>
-    </a>
+    </a> -->
     </div>
 </div>
