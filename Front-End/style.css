@@ -486,7 +486,9 @@ input[type=radio]:checked {
     color: #a878cc;
 }
 
-#product1 .pro .cart,
+/* shopping cart on featured item cards */
+
+/* #product1 .pro .cart,
 #product1 .pro .add {
     font-weight: 500;
     font-size: 24px;
@@ -495,9 +497,9 @@ input[type=radio]:checked {
     bottom: 20px;
     right: 30px;
     transition: 0.3s ease;
-}
+} */
 
-#product1 a i:nth-child(2) {
+/* #product1 a i:nth-child(2) {
     display: none;
 }
 
@@ -509,7 +511,7 @@ input[type=radio]:checked {
 #product1 a:hover i:nth-child(2) {
     display: block;
     transition: 0.5s ease;
-}
+} */
 
 #shrink-border {
     background-color: transparent;
@@ -588,7 +590,7 @@ input[type=radio]:checked {
 
 #pagnav a {
     text-decoration: none;
-    background-color: #a878ccca;
+    background-color: #bf9ed7ca;
     padding: 10px 15px;
     border-radius: 10px;
     color: #fff;
@@ -674,67 +676,66 @@ input[type=radio]:checked {
     color: #47384a;
 }
 
-/* CSS */
-.button-48 {
-    appearance: none;  
-    background-color: #FFFFFF;
-    border-width: 0;
+.arrow, small.back {
+    font-size: 16px;
+    font-weight: 700;
+    color: #57465b;
+    text-decoration: none;
+    transition: 0.3s ease;
+    line-height: 0;
+}
+
+small.back {
+    padding-left: 8px;
+}
+
+.arrow:hover,
+small.back:hover {
+    color: #a878cc;
+}
+
+/* add to cart button */
+.button-28 {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #1A1A1A;
     border-radius: 15px;
     box-sizing: border-box;
-    color: #000000;
+    color: #3B3B3B;
     cursor: pointer;
     display: inline-block;
-    font-family: Clarkson,Helvetica,sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 1em;
-    margin: 0;
-    opacity: 1;
-    outline: 0;
-    padding: 1.5em 2.2em;
-    position: relative;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 16px;
+    outline: none;
+    padding: 18px;
     text-align: center;
     text-decoration: none;
-    text-rendering: geometricprecision;
-    text-transform: uppercase;
-    transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    vertical-align: baseline;
-    white-space: nowrap;
-}  
+    width: 150px;
+    will-change: transform;
+}
 
-.button-48:before {
-    animation: opacityFallbackOut .5s step-end forwards;  
-    backface-visibility: hidden;
-    background-color: #d1bde0;
-    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    border-radius: 15px;
-    transform: translateZ(0);
-    transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
-    width: 100%;
-}  
+.button-28:disabled {
+    pointer-events: none;
+}
 
-.button-48:hover:before {
-  animation: opacityFallbackIn 0s step-start forwards;  
-  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
-}  
+.button-28:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
 
-.button-48:after {
-  background-color: #FFFFFF;  
-}  
-
-.button-48 span {
-  z-index: 1;  
-  position: relative;
-}  
+.button-28:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
 
 footer {
     display: flex;
