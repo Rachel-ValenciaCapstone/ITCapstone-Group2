@@ -30,9 +30,12 @@
         <?php include('./partials/login.php') ?>
     </section>
 
+    <!-- needs to change based on the item clicked -->
     <section id="prodetails" class="singleprod">
         <div class="single-pro-image">
+            <!-- main image -->
             <img src="img/products/pencil 1.jpg" width="100%" id="MainImg" alt="Kalour Professional Sketching Pencils 12pc">
+            <!-- small images -->
             <div class="small-img-group">
                 <div class="small-img-col">
                     <img src="img/products/pencil 1.jpg" width="100%" class="small-img" alt="Kalour Professional Sketching Pencils 12pc">
@@ -72,6 +75,7 @@
         </div>
     </footer>    
 
-    <script src="script.js"></script>
+    <script src="sprod.js"></script>
+    
 </body>
 </html>
