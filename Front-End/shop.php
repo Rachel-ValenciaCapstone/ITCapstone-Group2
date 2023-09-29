@@ -42,12 +42,6 @@
         <?php include('./partials/featured.php') ?>
     </section>
 
-    <section id="pagnav" class="section-p1">
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#"><i class="fa fa-long-arrow-right"></i></a>
-    </section>
-
     <footer class="section-p1">
         <?php include('./partials/footer.php') ?>
         <div class="citations">
