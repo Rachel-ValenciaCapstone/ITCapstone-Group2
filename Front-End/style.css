@@ -583,26 +583,6 @@ input[type=radio]:checked {
     color: #ffffff;
 }
 
-#pagnav {
-    text-align: center;
-    padding-top: 0;
-}
-
-#pagnav a {
-    text-decoration: none;
-    background-color: #bf9ed7ca;
-    padding: 10px 15px;
-    border-radius: 10px;
-    color: #fff;
-    font-weight: 400;
-}
-
-#pagnav a i {
-    font-size: 16px;
-    font-weight: 400;
-    color: #fff;
-}
-
 /* product details page */
 
 .singleprod {
