@@ -48,7 +48,6 @@
                 </div>
             </div>
         </div>
-
         <div class="single-pro-details">
             <a href="shop.php" class="fa fa-angle-left arrow"><small class="back">Shop</small></a>
             <h4>Kalour Professional Sketching Pencils 12pc</h4>
