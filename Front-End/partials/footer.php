@@ -48,3 +48,5 @@
 </div>
 
 <button onclick="topFunction()" id="pgup" class="material-symbols-rounded">expand_circle_up</button>
+
+<script src="pgup.js"></script>
