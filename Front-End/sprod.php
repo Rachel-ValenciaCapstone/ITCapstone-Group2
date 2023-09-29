@@ -52,7 +52,7 @@
             <a href="shop.php" class="fa fa-angle-left arrow"><small class="back">Shop</small></a>
             <h4>Kalour Professional Sketching Pencils 12pc</h4>
             <h2>$7.00</h2>
-            <button class="button-28"><div class="text">ADD TO CART</div></button>
+            <div><button class="button-28">ADD TO CART</button></div>
             <h4>Product Details</h4>
             <span>Premium sharpened graphite pencils for drawing (5H, 4H, 3H, 2H,HB, B, 2B, 3B, 4B, 5B, 6B, 8B).A wide variety of hardness for all your artwork needs.harder degrees for outlining (2B - 5H) and softer degrees for blending and layering (3B - 8B).Drawing Pencils enable creating lines of any thickness and color saturation.</span>
         </div>
