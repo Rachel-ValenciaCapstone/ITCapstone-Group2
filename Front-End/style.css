@@ -74,7 +74,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 17px 100px;
-    background: #dedce3;
+    background: #e9ddf1;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     z-index: 999;
     position: sticky;
@@ -645,7 +645,7 @@ input[type=radio]:checked {
 }
 
 #prodetails .single-pro-details h4 {
-    padding: 30px 0;
+    padding: 30px 0 10px;
 }
 
 #prodetails .single-pro-details h2 {
@@ -657,19 +657,6 @@ input[type=radio]:checked {
     padding: 5px 10px;
     margin-bottom: 10px;
 }
-
-#prodetails .single-pro-details input {
-    width: 50px;
-    height: 47px;
-    padding-left: 10px;
-    font-size: 16px;
-    margin-right: 10px;
-    border-radius: 10px;
-}
-
-#prodetails .single-pro-details input:focus {
-    outline: none;
-}    
 
 #prodetails .single-pro-details span {
     line-height: 25px;
@@ -708,7 +695,7 @@ small.back:hover {
     font-size: 16px;
     font-weight: 600;
     line-height: normal;
-    margin-top: 16px;
+    margin: 18px 0;
     outline: none;
     padding: 18px;
     text-align: center;
