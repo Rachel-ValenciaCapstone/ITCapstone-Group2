@@ -662,6 +662,7 @@ small.back:hover {
 }
 
 /* add to cart button */
+
 .button-28 {
     appearance: none;
     background-color: transparent;
@@ -702,6 +703,139 @@ small.back:hover {
 .button-28:active {
     box-shadow: none;
     transform: translateY(0);
+}
+
+/* shopping cart page */
+
+.shopping-cart {
+    background-color: #a878cc0a;
+}
+
+.shopping-cart div {
+    box-sizing: border-box;
+    display: block;
+}
+
+.cnav-bar-item {
+    display: inline-flex;
+    margin: 20px auto 18px;
+    text-align: center;
+    line-height: normal;
+    position: relative;
+    left: 20%;
+    color: #646464;
+}
+
+.label-active {
+    font-weight: bold;
+    color: #47384a;
+}
+
+.cnav-bar-item-separator {
+    margin: 0 5px 0 10px;
+}
+
+/* here is the section for shopping cart page */
+
+.cart-selector {
+    padding: 16px 16px 12px;
+}
+
+.cart-header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.item-check {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+
+.item-check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #ffffff;
+    border: 1px solid #47384a2f;
+}
+
+/* .item-check:hover input ~ .checkmark {
+    background-color: #796a7c1c;
+} */
+
+.item-check input:checked ~ .checkmark {
+    background-color: #47384a;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.item-check input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.item-check .checkmark:after {
+    left: 7px;
+    /* top: 2px; */
+    width: 5px;
+    height: 13px;
+    border: solid #ffffff;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* this is for the left column that's supposed to allow you to see the items you are checking out */
+
+.container-left {
+    -webkit-box-flex: 1;
+    flex: 1;
+    padding-right: 10px;
+    margin-bottom: 30px;
+}
+
+.col-l {
+    width: 66.6666667%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 10px;
+    float: left!important;
+}
+
+/* the order summary column */
+
+.container-right {
+    width: 33.3333333%;
+    min-width: 320px;
+    max-width: 450px;
+    /* float: right; */
+}
+
+.cart-amount {
+    box-sizing: border-box;
 }
 
 
