@@ -160,7 +160,7 @@ body {
     font-size: 15px;
 }
 
-/* home page */
+/* login popup */
 
 .login::before {
     content: '';
@@ -332,6 +332,83 @@ body {
     margin-top: 15px;
 
 }
+
+/* user account screen */
+
+.sub-menu-wrap {
+    position: absolute;
+    top: 13%;
+    right: 10%;
+    width: 220px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    padding: 10px 20px 0;
+    border-radius: 15px;
+    /* background: #fff; */
+    z-index: 99;
+}
+
+.sub-menu-wrap.open-menu {
+    max-height: 400px;
+    padding: 10px 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 15px 20px #47384a5b;
+    background: #fff;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info h3 {
+    font-size: 24px;
+    margin: 5px;
+}
+
+.sub-menu-wrap hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 10px 0;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #47384a;
+    margin: 12px 0;
+}
+
+.sub-menu-link p {
+    width: 100%;
+    margin: 0;
+}
+
+.sub-menu-link i {
+    width: 40px;
+    background-color: e5e5e5;
+    padding: 8px;
+    margin-right: 15px;
+}
+
+.sub-menu-link span {
+    font-size: 22px;
+    transition: transform 0.5s;
+}
+
+.sub-menu-link:hover span {
+    transform: translateX(5px);
+}
+
+.sub-menu-link:hover p {
+    font-weight: 600;
+}
+
+/* home page */
 
 #essentials {
     text-align: center;
@@ -735,8 +812,6 @@ small.back:hover {
     margin: 0 5px 0 10px;
 }
 
-/* here is the section for shopping cart page */
-
 .cart-selector {
     padding: 16px 16px 12px;
 }
@@ -808,8 +883,6 @@ small.back:hover {
     transform: rotate(45deg);
 }
 
-/* this is for the left column that's supposed to allow you to see the items you are checking out */
-
 .container-left {
     -webkit-box-flex: 1;
     flex: 1;
@@ -825,8 +898,6 @@ small.back:hover {
     float: left!important;
 }
 
-/* the order summary column */
-
 .container-right {
     width: 33.3333333%;
     min-width: 320px;
@@ -837,7 +908,6 @@ small.back:hover {
 .cart-amount {
     box-sizing: border-box;
 }
-
 
 footer {
     display: flex;
