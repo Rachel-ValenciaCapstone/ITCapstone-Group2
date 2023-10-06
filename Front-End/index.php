@@ -18,14 +18,14 @@
         </ul>
     </header>
 
-    <!-- popup login -->
-    <section class="login">
-        <?php include('./partials/login.php') ?>
-    </section>
-
     <!-- user account dropdown -->
     <section class="sub-menu-wrap" id="subMenu">
         <?php include('./partials/account.php') ?>
+    </section>
+
+    <!-- popup login -->
+    <section class="login">
+        <?php include('./partials/login.php') ?>
     </section>
 
     <!-- hero banner -->
