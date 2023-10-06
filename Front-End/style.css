@@ -938,7 +938,7 @@ footer p {
     margin: 0 0 8px 0;
 }
 
-footer a {
+footer i {
     font-size: 15px;
     text-decoration: none;
     color: #47384a;
@@ -965,7 +965,7 @@ footer .install img {
 }
 
 footer .follow i:hover,
-footer a:hover {
+footer i:hover {
     color: #a878cc;
 
 }
