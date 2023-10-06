@@ -16,20 +16,20 @@
 </div>
 <div class="col">
     <h4>About</h4>
-    <a href="#">About Us</a>
-    <a href="#">Delivery Information</a>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms & Conditions</a>
-    <a href="#">Contact Us</a>
+    <i>About Us</i>
+    <i>Delivery Information</i>
+    <i>Privacy Policy</i>
+    <i>Terms & Conditions</i>
+    <i>Contact Us</i>
 </div>
 
 <div class="col">
     <h4>My Account</h4>
-    <a href="#">Sign In</a>
-    <a href="#">View Cart</a>
-    <a href="#">My Wishlist</a>
-    <a href="#">Track My Order</a>
-    <a href="#">Help</a>
+    <i>Sign In</i>
+    <i>View Cart</i>
+    <i>My Wishlist</i>
+    <i>Track My Order</i>
+    <i>Help</i>
 </div>
 
 <div class="col install">
