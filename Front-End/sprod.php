@@ -19,17 +19,22 @@
         <ul id="navbar">
             <li><a href="index.php" class="material-symbols-rounded">home</a></li>
             <li><a href="shop.php" class="material-symbols-rounded" id="active">store</a></li>
-            <li><a href="account.php" class="material-symbols-rounded">account_circle</a></li>
+            <li><a onclick="toggleMenu()" class="material-symbols-rounded">account_circle</a></li>
             <li><a href="cart.php" class="material-symbols-rounded">shopping_cart</a></li>
             <li><button id="form_open" class="material-symbols-rounded">login</button></li>
         </ul>
     </header>
 
+    <!-- user account dropdown -->
+    <section class="sub-menu-wrap" id="subMenu">
+        <?php include('./partials/account.php') ?>
+    </section>
+    
     <!-- popup login -->
     <section class="login">
         <?php include('./partials/login.php') ?>
     </section>
-
+    
     <!-- needs to change based on the item clicked -->
     <section id="prodetails" class="singleprod">
         <div class="single-pro-image">
