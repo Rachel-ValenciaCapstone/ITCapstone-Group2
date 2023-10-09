@@ -19,8 +19,8 @@
         <span>></span>
     </a>
     <a href="#" class="sub-menu-link">
-        <i class="material-symbols-rounded">Help</i>
-        <p>help</p>
+        <i class="material-symbols-rounded">help</i>
+        <p>Help</p>
         <span>></span>
     </a>
     <!-- <a href="#" class="sub-menu-link">
