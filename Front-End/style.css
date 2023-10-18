@@ -67,7 +67,18 @@ body {
     margin: 0 4px;  
     font-size: 22px;  
     color: #47384a;
-}  
+}
+
+ion-icon {
+    display: inline-block;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+/* header */
 
 .header {
     display: flex;
@@ -115,49 +126,6 @@ body {
 #navbar li button:hover::after {
     background-color: #a878cc;
     position: absolute;
-}
-
-#navbar li button {
-    border: none;
-    background-color: transparent;
-}
-
-#hero {
-    background-image: url("img/hero\ 1.jpg");
-    height: 90vh;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top 63% right 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-#hero h4 {
-    font-family: 'Roboto Mono', monospace;
-    line-height: 1.5;
-    display: block;
-    margin-top: -50px;
-}
-
-#hero p {
-    font-family: 'Shantell Sans', cursive;
-}
-
-#hero button {
-    background-image: url("img/button.png");
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: #47384a;
-    border: 0;
-    padding: 10px 65px 14px 65px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 15px;
 }
 
 /* login popup */
@@ -408,7 +376,71 @@ body {
     font-weight: 600;
 }
 
+/* error 404 page */
+
+.error404 {
+    background-image: url("img/404\ page.jpg");
+    /* opacity: 70%; */
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: top 63% right 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex;
+    text-align: center;
+    /* justify-content: center; */
+}
+
+.error404 h1,
+.error404 h2,
+.error404 h3 {
+    position: relative;
+    top: 28%;
+    color: white;
+}
+
+
 /* home page */
+
+#hero {
+    background-image: url("img/hero\ 1.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top 63% right 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#hero h4 {
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.5;
+    display: block;
+    margin-top: -50px;
+}
+
+#hero p {
+    font-family: 'Shantell Sans', cursive;
+}
+
+#hero button {
+    background-image: url("img/button.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #47384a;
+    border: 0;
+    padding: 10px 65px 14px 65px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
 
 #essentials {
     text-align: center;
@@ -574,9 +606,9 @@ input[type=radio]:checked {
     bottom: 20px;
     right: 30px;
     transition: 0.3s ease;
-} */
+}
 
-/* #product1 a i:nth-child(2) {
+#product1 a i:nth-child(2) {
     display: none;
 }
 
@@ -784,18 +816,26 @@ small.back:hover {
 
 /* shopping cart page */
 
-.shopping-cart {
+/* .shopping-cart {
     background-color: #a878cc0a;
+    max-width: 1440px;
+    min-height: 100vh;
+    display: flex;
+    margin: 20px 40px;
+    flex-direction: column;
 }
 
-.shopping-cart div {
-    box-sizing: border-box;
-    display: block;
+.item-flex {
+    display: flex;
+    flex-grow: 1;
 }
 
-.cnav-bar-item {
-    display: inline-flex;
-    margin: 20px auto 18px;
+.cart-selector {
+    width: 70%;
+    padding: 40px;
+} */
+
+/* .cnav-bar-item {
     text-align: center;
     line-height: normal;
     position: relative;
@@ -818,7 +858,7 @@ small.back:hover {
 
 .cart-header {
     border-bottom: 1px solid #e5e5e5;
-}
+} */
 
 .item-check {
     display: block;
@@ -938,11 +978,16 @@ footer p {
     margin: 0 0 8px 0;
 }
 
-footer i {
+footer i,
+footer a {
     font-size: 15px;
     text-decoration: none;
     color: #47384a;
     margin-bottom: 10px;
+}
+
+footer i {
+    font-style: normal;
 }
 
 footer .follow {
@@ -965,7 +1010,8 @@ footer .install img {
 }
 
 footer .follow i:hover,
-footer i:hover {
+footer i:hover,
+footer a:hover {
     color: #a878cc;
 
 }
