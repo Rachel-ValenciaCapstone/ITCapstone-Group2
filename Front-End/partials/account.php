@@ -8,17 +8,17 @@
         <p>View Cart</p>
         <span>></span>
     </a>
-    <a href="#" class="sub-menu-link">
+    <!-- <a href="#" class="sub-menu-link">
         <i class="material-symbols-rounded">favorite</i>
         <p>Wishlist</p>
         <span>></span>
-    </a>
+    </a> -->
     <a href="#" class="sub-menu-link">
-        <i class="material-symbols-rounded">local_shipping</i>
-        <p>Track Order</p>
+        <i class="material-symbols-rounded">package_2</i>
+        <p>My Orders</p>
         <span>></span>
     </a>
-    <a href="#" class="sub-menu-link">
+    <a href="404.html" class="sub-menu-link">
         <i class="material-symbols-rounded">help</i>
         <p>Help</p>
         <span>></span>
