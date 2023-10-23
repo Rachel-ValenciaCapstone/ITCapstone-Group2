@@ -57,15 +57,15 @@ body {
 
 .star {
     font-variation-settings:
-    'FILL' 1,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
 
-.fa {  
-    margin: 0 4px;  
-    font-size: 22px;  
+.fa {
+    margin: 0 4px;
+    font-size: 22px;
     color: #47384a;
 }
 
@@ -76,6 +76,12 @@ ion-icon {
 button {
     border: none;
     background-color: transparent;
+}
+
+input {
+    font: inherit;
+    width: 100%;
+    border: none;
 }
 
 /* header */
@@ -147,7 +153,7 @@ button {
     pointer-events: none;
 }
 
-.form_container  {
+.form_container {
     position: absolute;
     max-width: 400px;
     width: 100%;
@@ -236,9 +242,9 @@ button {
     color: #646464;
 }
 
-.input_box input:focus ~ i.email,
-.input_box input:focus ~ i.password,
-.input_box input:focus ~ i.name {
+.input_box input:focus~i.email,
+.input_box input:focus~i.password,
+.input_box input:focus~i.name {
     color: #a878cc;
 }
 
@@ -301,8 +307,7 @@ button {
 
 }
 
-/* user account screen */
-
+/* account dropdown */
 .sub-menu-wrap {
     position: absolute;
     top: 13%;
@@ -314,7 +319,7 @@ button {
     padding: 10px 20px 0;
     border-radius: 15px;
     /* background: #fff; */
-    z-index: 99;
+    /* z-index: 99; */
 }
 
 .sub-menu-wrap.open-menu {
@@ -358,7 +363,6 @@ button {
 
 .sub-menu-link i {
     width: 40px;
-    background-color: e5e5e5;
     padding: 8px;
     margin-right: 15px;
 }
@@ -388,7 +392,6 @@ button {
     /* background-position: top 63% right 0; */
     display: flex;
     flex-direction: column;
-    align-items: flex;
     text-align: center;
     /* justify-content: center; */
 }
@@ -400,7 +403,6 @@ button {
     top: 28%;
     color: white;
 }
-
 
 /* home page */
 
@@ -474,20 +476,19 @@ button {
 
 input[type=radio] {
     position: relative;
-	appearance: none;
-	width: 10px;
-	height: 10px;
+    appearance: none;
+    width: 10px;
+    height: 10px;
     top: 110%;
     margin: 0 15px 0 0;
     opacity: 0.6;
     cursor: pointer;
-	border: 2px solid #a878cc;
-	border-radius: 50%;
+    border: 2px solid #a878cc;
+    border-radius: 50%;
 }
 
-
 input[type=radio]:checked {
-	background-color: #a878cc;
+    background-color: #a878cc;
 }
 
 #s1:checked~#slider1,
@@ -595,33 +596,6 @@ input[type=radio]:checked {
     color: #a878cc;
 }
 
-/* shopping cart on featured item cards */
-
-/* #product1 .pro .cart,
-#product1 .pro .add {
-    font-weight: 500;
-    font-size: 24px;
-    color: #a878cc;
-    position: absolute;
-    bottom: 20px;
-    right: 30px;
-    transition: 0.3s ease;
-}
-
-#product1 a i:nth-child(2) {
-    display: none;
-}
-
-#product1 a:hover i:nth-child(1) {
-    display: none;
-    transition: 0.5s ease;
-}
-
-#product1 a:hover i:nth-child(2) {
-    display: block;
-    transition: 0.5s ease;
-} */
-
 #shrink-border {
     background-color: transparent;
     color: #47384a;
@@ -692,7 +666,7 @@ input[type=radio]:checked {
     color: #ffffff;
 }
 
-/* product details page */
+/* individual product page */
 
 .singleprod {
     padding: 35px 80px;
@@ -752,7 +726,8 @@ input[type=radio]:checked {
     color: #47384a;
 }
 
-.arrow, small.back {
+.arrow,
+small.back {
     font-size: 16px;
     font-weight: 700;
     color: #57465b;
@@ -770,7 +745,7 @@ small.back:hover {
     color: #a878cc;
 }
 
-/* add to cart button */
+/* add to cart button on individual product page*/
 
 .button-28 {
     appearance: none;
@@ -781,7 +756,7 @@ small.back:hover {
     color: #3B3B3B;
     cursor: pointer;
     display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 16px;
     font-weight: 600;
     line-height: normal;
@@ -816,13 +791,36 @@ small.back:hover {
 
 /* shopping cart page */
 
-/* .shopping-cart {
-    background-color: #a878cc0a;
-    max-width: 1440px;
+.shopping-cart {
+    /* max-width: 1520px; */
     min-height: 100vh;
+    margin: auto;
     display: flex;
-    margin: 20px 40px;
     flex-direction: column;
+    /* background-color: #f4f4f4; */
+}
+
+.shopping-header {
+    color: #5d5d5d;
+    border-bottom: 1px solid gainsboro;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.shopping-header span {
+    position: relative; 
+    left: 5%;
+}
+
+.cart-label,
+.cart-separator {
+    color: darkgray;
+}
+
+.cart-label-active {
+    color: gray;
 }
 
 .item-flex {
@@ -830,123 +828,259 @@ small.back:hover {
     flex-grow: 1;
 }
 
-.cart-selector {
+/* payment section */
+
+.checkout {
     width: 70%;
-    padding: 40px;
-} */
-
-/* .cnav-bar-item {
-    text-align: center;
-    line-height: normal;
-    position: relative;
-    left: 20%;
-    color: #646464;
+    padding: 40px 60px;
+    border-right: 1px solid gainsboro;
 }
 
-.label-active {
-    font-weight: bold;
-    color: #47384a;
-}
-
-.cnav-bar-item-separator {
-    margin: 0 5px 0 10px;
-}
-
-.cart-selector {
-    padding: 16px 16px 12px;
-}
-
-.cart-header {
-    border-bottom: 1px solid #e5e5e5;
-} */
-
-.item-check {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/* Hide the browser's default checkbox */
-
-.item-check input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 24px;
-    width: 24px;
-    background-color: #ffffff;
-    border: 1px solid #47384a2f;
-}
-
-/* .item-check:hover input ~ .checkmark {
-    background-color: #796a7c1c;
-} */
-
-.item-check input:checked ~ .checkmark {
-    background-color: #47384a;
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.item-check input:checked ~ .checkmark:after {
-    display: block;
-}
-
-.item-check .checkmark:after {
-    left: 7px;
-    /* top: 2px; */
-    width: 5px;
-    height: 13px;
-    border: solid #ffffff;
-    border-width: 0 4px 4px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.container-left {
-    -webkit-box-flex: 1;
-    flex: 1;
-    padding-right: 10px;
+.section-heading {
     margin-bottom: 30px;
 }
 
-.col-l {
-    width: 66.6666667%;
-    position: relative;
-    min-height: 1px;
+.payment-form {
+    margin-bottom: 40px;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.payment-method .method {
+    border: 1px solid #47384a;
+    border-radius: 5px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.payment-method .selected {
+    border-color: #d0ace0;
+}
+
+.payment-method .method ion-icon {
+    font-size: 20px;
+}
+
+.payment-method .method .checkmark {
+    margin-left: auto;
+    color: #47384a;
+}
+
+.payment-method .method .fill {
+    color: #d0ace0;
+}
+
+.label-default {
     padding-left: 10px;
-    float: left!important;
+    margin-bottom: 5px;
+    color: darkgrey;
 }
 
-.container-right {
-    width: 33.3333333%;
-    min-width: 320px;
-    max-width: 450px;
-    /* float: right; */
+.input-default {
+    background: #f5f3f5;
+    border-radius: 10px;
+    color: grey;
 }
 
-.cart-amount {
-    box-sizing: border-box;
+.payment-form input {
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+.cardholder-name,
+.card-number {
+    margin-bottom: 20px;
+}
+
+.card-number input,
+.cvv input {
+    letter-spacing: 3px;
+}
+
+.input-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.input_flex .expire-date,
+.input_flex .cvv {
+    width: 50%;
+}
+
+.expire-date .input-flex {
+    color: darkgray;
+    gap: 13px;
+}
+
+.expire-date .input-flex input {
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn {
+    border-radius: 5px;
+}
+
+.btn:active {
+    transform: scale(0.99);
+}
+
+.btn:focus {
+    color: white;
+    background: #d0ace0;
+    outline: 2px solid #d0ace0;
+    outline-offset: 2px;
+}
+
+.btn-primary {
+    background: #d0ace0;
+    color: white;
+    padding: 13px 45px;
+}
+
+.btn-primary b {
+    margin-right: 10px;
+}
+
+/* order summary section */
+
+.cart {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.cart-item-box {
+    padding: 40px;
+    margin-bottom: auto;
+}
+
+.product-card:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.product-card .card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card .summary-img {
+    border-radius: 5px;
+}
+
+.card .detail .product-name {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card .detail .wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.product-qty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-qty button {
+    background-color: #f5f3f5;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-qty button:active,
+.product-close-btn:active ion-icon {
+    transform: scale(0.95);
+}
+
+.product-qty button ion-icon {
+    --ionicon-stroke-width: 60px;
+    font-size: 10px;
+}
+
+.product-close-btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.product-close-btn ion-icon {
+    font-size: 20px;
+    color: #47384a;
+}
+
+.product-close-btn:hover ion-icon {
+    color: maroon;
+}
+
+.discount-token {
+    padding: 40px;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+
+.wrapper-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.wrapper-flex input {
+    padding: 12px 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.btn-outline {
+    padding: 10px 25px;
+    border: 1px solid #d0ace0;
+    color: #d0ace0;
+}
+
+.btn-outline:hover {
+    background: #d0ace0;
+    color: white;
+}
+
+.amount {
+    padding: 40px;
+}
+
+.amount > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.amount > div:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.amount .total {
+    font-size: 18px;
+    font-weight: 700;
 }
 
 footer {
