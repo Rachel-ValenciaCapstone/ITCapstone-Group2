@@ -45,3 +45,5 @@
         </form>
     </div>
 </div>
+
+<script src="login.js"></script>
