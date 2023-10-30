@@ -14,7 +14,7 @@
             <li><a href="index.php" class="material-symbols-rounded">home</a></li>
             <li><a href="shop.php" class="material-symbols-rounded">store</a></li>
             <li><a onclick="toggleMenu()" class="material-symbols-rounded">account_circle</a></li>
-            <li><a href="cart2.php" class="material-symbols-rounded" id="active">shopping_cart</a></li>
+            <li><a href="cart.php" class="material-symbols-rounded" id="active">shopping_cart</a></li>
             <li><button id="form_open" class="material-symbols-rounded">login</button></li>
         </ul>
     </header>
@@ -32,14 +32,13 @@
     <!-- shopping cart page -->
     <section class="shopping-cart">
         <div class="shopping-header">
-            <span class="cart-label">Home</span>
+            <a href="index.php" class="cart-label">Home</a>
             <span class="cart-separator">></span>
-            <span class="cart-label-active">Cart</span>
+            <a href="cart.php" class="cart-label-active">Cart</a>
             <span class="cart-separator">></span>
-            <span class="cart-label">Shipping</span>
+            <a href="shipping.php" class="cart-label">Shipping</a>
             <span class="cart-separator">></span>
-            <span class="cart-label">Order Confirmation</span>
-
+            <a href="#" class="cart-label">Order Confirmation</a>
         </div>
 
         <div class="item-flex">
@@ -48,7 +47,6 @@
                 <h3 class="section-heading">Payment Details</h3>
 
                 <div class="payment-form">
-
                     <div class="payment-method">
                         <button class="method selected">
                             <ion-icon name="card-outline"></ion-icon>
@@ -62,58 +60,87 @@
                         </button>
                     </div>
 
-                    <form action="#">
+                    <form action="shipping.php">
                         <div class="cardholder-name">
                             <label for="" class="label-default">Cardholder Name</label>
-                            <input type="text" name="cardholder-name" id="cardholder-name" class="input-default">
+                            <input type="text" name="cardholder-name" id="cardholder-name" class="input-default" required>
                         </div>
 
                         <div class="card-number">
                             <label for="" class="label-default">Card Number</label>
-                            <input type="number" name="card-number" id="card-number" class="input-default">
+                            <input type="text" name="card-number" id="card-number" class="input-default" onkeypress='return formats(this,event)' onkeyup="return numberValidation(event)" required>
                         </div>
 
                         <div class="input-flex">
-
                             <div class="expire-date">
                                 <label for="expire-date" class="label-default">Expiration Date</label>
-
                                 <div class="input-flex">
-                                    <input type="number" name="month" id="expire-date" placeholder="12" min="1" max="12" class="input-default">
+                                    <select name="month" id="expire-date" class="input-default">
+                                        <option selected>MM</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
                                     /
-                                    <input type="number" name="year" id="expire-date" placeholder="23" min="23" max="90" class="input-default">
+                                    <select name="year" id="expire-date" class="input-default">
+                                        <option selected>YY</option>
+                                        <option>23</option>
+                                        <option>24</option>
+                                        <option>25</option>
+                                        <option>26</option>
+                                        <option>27</option>
+                                        <option>28</option>
+                                        <option>29</option>
+                                        <option>30</option>
+                                        <option>31</option>
+                                        <option>32</option>
+                                        <option>33</option>
+                                        <option>34</option>
+                                        <option>35</option>
+                                        <option>36</option>
+                                        <option>37</option>
+                                        <option>38</option>
+                                        <option>39</option>
+                                    </select>
                                 </div>
                             </div>
 
                             <div class="cvv">
                                 <label for="" class="label-default">CVV</label>
-                                <input type="number" name="cvv" id="cvv" class="input-default">
+                                <input type="number" name="cvv" id="cvv" class="input-default" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" required>
                             </div>
+                        </div>
 
+                        <div class="continueBtn">
+                            <button class="btn btn-secondary" type="button" onclick="location.href='index.php';">
+                                <span>Return to Home</span>
+                            </button>
+                            <button class="btn btn-primary" type="submit">
+                                <span>Continue to Shipping</span>
+                            </button>
                         </div>
                     </form>
-
                 </div>
-
-                <button class="btn btn-primary">
-                    <b>Pay</b> $ <span id="payAmount">19.17</span>
-                </button>
-
             </section>
 
             <!-- cart section -->
             <section class="cart">
-
                 <div class="cart-item-box">
-
                     <h3 class="section-heading">Order Summary</h3>
 
                     <div class="product-card">
-
                         <div class="card">
-
                             <div class="img-box">
-                                <img src="img/products/pencil 1.jpg" alt="Kalour Professional Sketching Pencils 12pc" width="100px" class="summary-img">
+                                <img src="img/products/pencil 1.jpg" alt="Kalour Professional Sketching Pencils 12pc" width="120px" class="summary-img">
                             </div>
 
                             <div class="detail">
@@ -128,9 +155,8 @@
                                             <ion-icon name="add-outline"></ion-icon>
                                         </button>
                                     </div>
-
                                     <div class="price">
-                                        $ <span id="price">7</span>
+                                        $ <span id="price">7.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -138,17 +164,13 @@
                             <button class="product-close-btn">
                                 <ion-icon name="trash-outline"></ion-icon>
                             </button>
-
                         </div>
-
                     </div>
 
                     <div class="product-card">
-
                         <div class="card">
-
                             <div class="img-box">
-                                <img src="img/products/pen 1.jpg" alt="ARTLINE Drawing System Set of 4" width="100px" class="summary-img">
+                                <img src="img/products/pen 1.jpg" alt="ARTLINE Drawing System Set of 4" width="120px" class="summary-img">
                             </div>
 
                             <div class="detail">
@@ -163,9 +185,8 @@
                                             <ion-icon name="add-outline"></ion-icon>
                                         </button>
                                     </div>
-
                                     <div class="price">
-                                        $ <span id="price">11</span>
+                                        $ <span id="price">11.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -173,33 +194,22 @@
                             <button class="product-close-btn">
                                 <ion-icon name="trash-outline"></ion-icon>
                             </button>
-
                         </div>
-
                     </div>
-
                 </div>
 
                 <div class="wrapper">
-
                     <div class="discount-token">
-
-                        <label for="token" class="label-default">Gift cart/Discount code</label>
-
+                        <label for="token" class="label-default">Gift card/Discount code</label>
                         <div class="wrapper-flex">
-
                             <input type="text" name="discount-token" id="discount-token" class="input-default">
-                            
                             <button class="btn btn-outline">Apply</button>
-
                         </div>
-
                     </div>
 
                     <div class="amount">
-
                         <div class="subtotal">
-                            <span>Subtotal</span> <span>$ <span id="subtotal">18</span></span>
+                            <span>Subtotal</span> <span>$ <span id="subtotal">18.00</span></span>
                         </div>
                         <div class="tax">
                             <span>Tax</span> <span>$ <span id="tax"> 1.17</span></span>
@@ -210,18 +220,67 @@
                         <div class="total">
                             <span>Total</span> <span>$ <span id="total">19.17</span></span>
                         </div>
+                        <!-- <div class="shipping">
+                            <span>Shipping</span> <span>$ <span id="shipping">6.99</span></span>
+                        </div>
+                        <div class="total">
+                            <span>Total</span> <span>$ <span id="total">26.16</span></span>
+                        </div> -->
                     </div>
-
                 </div>
-
             </section>
-
         </div>
-
     </section>
 
     <footer class="section-p1">
-        <?php include('./partials/footer.php') ?>
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="logo">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 5678 Sunset Boulevard, Los Angeles, CA 90001</p>
+            <p><strong>Phone:</strong> (555) 123-4567</p>
+            <p><strong>Hours:</strong> 9:00 AM - 5:00 PM, Mon-Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-youtube-play"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <i>About Us</i>
+            <i>Delivery Information</i>
+            <i>Privacy Policy</i>
+            <i>Terms & Conditions</i>
+            <i>Contact Us</i>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <i>Sign In</i>
+            <i>View Cart</i>
+            <i>My Wishlist</i>
+            <i>Track My Order</i>
+            <i>Help</i>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="App Store">
+                <img src="img/pay/play.jpg" alt="Google Play">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="Payment Methods">
+        </div>
+
+        <div class="copyright">
+            <p>© 2023, IT Capstone Group 2 - Women in Stem</p>
+        </div>
         <div class="citations">
             <cite>Web icon by <a href="https://www.flaticon.com/authors/darius-dan">Flaticon</a></cite>
         </div>
