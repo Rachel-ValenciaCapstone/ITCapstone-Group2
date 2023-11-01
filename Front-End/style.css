@@ -994,6 +994,9 @@ input::-webkit-inner-spin-button {
 .product-card:not(:last-child) {
     margin-top: 20px;
     margin-bottom: 20px;
+    border-bottom: 1px solid gainsboro;
+    /* border-bottom-style: double;
+    border-bottom-color: gainsboro; */
 }
 
 .product-card .card {
@@ -1016,6 +1019,7 @@ input::-webkit-inner-spin-button {
     display: flex;
     gap: 20px;
 }
+
 
 .product-qty {
     display: flex;
@@ -1106,7 +1110,7 @@ input::-webkit-inner-spin-button {
     font-weight: 700;
 }
 
-/* shipment information */
+/* shipping page */
 
 select {
     height: 40px;
@@ -1123,7 +1127,97 @@ select#expire-date {
     border-top: 1px solid gainsboro;
 }
 
-/* footer section */
+/* order confirmation page */
+
+.order-confirmation {
+    margin-bottom: 10px;
+}
+
+.orderconf-header {
+    /* background-image: url("./img/hero\ 3.jpg"); */
+    text-align: center;
+    align-content: center;
+    width: 30%;
+    margin: auto;
+    /* padding-top: 40px; */
+}
+
+.orderconf-header img {
+    margin-top: 10px;
+    width: 70%;
+}
+
+.info-block {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 85%;
+    margin: 40px auto;
+}
+
+.shipping-info,
+.billing-info,
+.shipping-method {
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    width: 25%;
+    padding-top: 15px;
+    padding-left: 30px;
+}
+
+.shipping-info {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.shipping-method {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.shipping-info,
+.shipping-method {
+    border-right: 1px solid gainsboro;
+    border-left: 1px solid gainsboro;
+}
+
+.address-header {
+    margin-bottom: 14px;
+}
+
+.order-block {
+    display: flex;
+    margin: auto;
+}
+
+.order-summary {
+    position: relative;
+    left: 11%;
+    border: 1px solid gainsboro;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.orderconf-detail {
+    position: relative;
+    top: -25px;
+    width: 70%;
+    height: 100%;
+}
+
+.orderconf-name {
+    font-size: 18px;
+}
+
+.orderconf-price {
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+}
+
+/* footer  */
 
 footer {
     display: flex;
