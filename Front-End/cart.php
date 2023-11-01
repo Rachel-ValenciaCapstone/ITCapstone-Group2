@@ -211,14 +211,14 @@
                         <div class="subtotal">
                             <span>Subtotal</span> <span>$ <span id="subtotal">18.00</span></span>
                         </div>
-                        <div class="tax">
-                            <span>Tax</span> <span>$ <span id="tax"> 1.17</span></span>
-                        </div>
                         <div class="shipping">
-                            <span>Shipping</span> <span>$ <span id="shipping">0.00</span></span>
+                            <span>Shipping fee</span> <span>$ <span id="shipping">0.00</span></span>
+                        </div>
+                        <div class="tax">
+                            <span>Sales tax</span> <span>$ <span id="tax">1.17</span></span>
                         </div>
                         <div class="total">
-                            <span>Total</span> <span>$ <span id="total">19.17</span></span>
+                            <span>Grand total</span> <span>$ <span id="total">19.17</span></span>
                         </div>
                         <!-- <div class="shipping">
                             <span>Shipping</span> <span>$ <span id="shipping">6.99</span></span>
