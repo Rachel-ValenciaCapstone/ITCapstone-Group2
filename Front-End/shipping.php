@@ -30,6 +30,7 @@
     </section>
 
     <!-- shopping cart page -->
+    <!-- all links will be disabled in the future -->
     <section class="shopping-cart">
         <div class="shopping-header">
             <a href="index.php" class="cart-label">Home</a>
@@ -38,7 +39,7 @@
             <span class="cart-separator">></span>
             <a href="shipping.php" class="cart-label-active">Shipping</a>
             <span class="cart-separator">></span>
-            <a href="#" class="cart-label">Order Confirmation</a>
+            <a href="orderconf.php" class="cart-label">Order Confirmation</a>
         </div>
 
         <div class="item-flex">
@@ -60,7 +61,7 @@
                         </button>
                     </div>
 
-                    <form action="#">
+                    <form action="orderconf.php">
                         <div class="card-number">
                             <label for="full-name" class="label-default">Full Name</label>
                             <input type="text" name="full-name" id="full-name" class="input-default" required>
@@ -145,13 +146,13 @@
                             <div class="card-number" style="width: 30%;">
                                 <label for="zip" class="label-default">Zip Code</label>
                                 <input type="number" name="zip" id="zip" class="input-default" required>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="input-flex">
                             <div style="width: 40%;">
                                 <label for="phone" class="label-default">Phone Number</label>
                                 <!-- <input type="tel" name="phone" id="phone" class="input-default" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required> -->
-                                <input type="tel" name="phone" id="phone" class="input-default" onInput="this.value = phoneFormat(this.value)" required/>
+                                <input type="tel" name="phone" id="phone" class="input-default" onInput="this.value = phoneFormat(this.value)" required />
                             </div>
                             <div style="width: 60%;">
                                 <label for="semail" class="label-default">Email</label>
@@ -220,7 +221,7 @@
                 </div>
 
                 <div class="wrapper">
-                    <div class="discount-token">
+                    <div class="discount-token" name="discount-token" id="discount-token">
                         <p>Gift card/Discount code applied: None</p>
                     </div>
 
@@ -228,14 +229,14 @@
                         <div class="subtotal">
                             <span>Subtotal</span> <span>$ <span id="subtotal">18.00</span></span>
                         </div>
-                        <div class="tax">
-                            <span>Tax</span> <span>$ <span id="tax">1.17</span></span>
-                        </div>
                         <div class="shipping">
-                            <span>Shipping</span> <span>$ <span id="shipping">0.00</span></span>
+                            <span>Shipping fee</span> <span>$ <span id="shipping">0.00</span></span>
+                        </div>
+                        <div class="tax">
+                            <span>Sales tax</span> <span>$ <span id="tax">1.17</span></span>
                         </div>
                         <div class="total">
-                            <span>Total</span> <span>$ <span id="total">19.17</span></span>
+                            <span>Grand total</span> <span>$ <span id="total">19.17</span></span>
                         </div>
                     </div>
                 </div>
