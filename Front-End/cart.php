@@ -191,7 +191,7 @@
                                 </div>
                             </div>
 
-                            <button class="product-close-btn">
+                            <button class="product-close-btn" id="remove">
                                 <ion-icon name="trash-outline"></ion-icon>
                             </button>
                         </div>
