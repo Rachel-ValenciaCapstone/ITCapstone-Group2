@@ -35,34 +35,74 @@
         <?php include('./partials/login.php') ?>
     </section>
     
-    <!-- needs to change based on the item clicked -->
+<?php
+    //Connects to database and swaps out images/details based on what product was selected from the "Featured Page"
+    try {
+        $item = $_GET['id'];
+        $query = "SELECT * FROM products WHERE product_id=$item";
+
+        $mysqli = require __DIR__ . "/database_handler.php";
+        $result = $mysqli->query($query);
+        
+        if ($result->num_rows <1) {
+            die("<p>Product not found</p>");
+        }
+
+        $product = $result->fetch_assoc();
+        $productName = $product['product_name'];
+        $price = $product['price'];
+        $description = $product['description'];
+        $mainImage = $product['main_image'];
+        $image1 = $product['image1'];
+        $image2 = $product['image2'];
+        $image3 = $product['image3'];
+        $image4 = $product['image4'];
+    } catch (Exception $ex) {
+        die("error");
+    }                      
+    ?>
+    
+    <!-- Changes based on the item clicked -->
     <section id="prodetails" class="singleprod">
         <div class="single-pro-image">
-            <!-- main image -->
-            <img src="img/products/pencil 1.jpg" width="100%" id="MainImg" alt="Kalour Professional Sketching Pencils 12pc">
+        <!-- main image -->
+        <?php
+            echo "<img src='img/products/$mainImage'" . 'width="100%" id="MainImg" alt="CHANGE THIS Kalour Professional Sketching Pencils 12pc">';      // CHANGE THIS TO PHP
+        ?>
+        </div>
             <!-- small images -->
             <div class="small-img-group">
                 <div class="small-img-col">
-                    <img src="img/products/pencil 1.jpg" width="100%" class="small-img" alt="Kalour Professional Sketching Pencils 12pc">
+                <?php    
+                    echo "<img src='img/products/$image1'" . 'width="100%" class="small-img" alt="CHANGE THIS Kalour Professional Sketching Pencils 12pc">';        // CHANGE THIS TO PHP
+                ?>
                 </div>
                 <div class="small-img-col">
-                    <img src="img/products/pencil 3.jpg" width="100%" class="small-img" alt="Kalour Professional Sketching Pencils 12pc">
+                <?php  
+                    echo "<img src='img/products/$image2'" . 'width="100%" class="small-img" alt="CHANGE THIS Kalour Professional Sketching Pencils 12pc">';        // CHANGE THIS TO PHP
+                ?>
                 </div>
                 <div class="small-img-col">
-                    <img src="img/products/pencil 2.jpg" width="100%" class="small-img" alt="Kalour Professional Sketching Pencils 12pc">
+                <?php
+                    echo "<img src='img/products/$image3'" . 'width="100%" class="small-img" alt="CHANGE THIS Kalour Professional Sketching Pencils 12pc">';
+                ?>
                 </div>
                 <div class="small-img-col">
-                    <img src="img/products/pencil 4.jpg" width="100%" class="small-img" alt="Kalour Professional Sketching Pencils 12pc">
+                <?php
+                    echo "<img src='img/products/$image4'" . 'width="100%" class="small-img" alt="CHANGE THIS Kalour Professional Sketching Pencils 12pc">';
+                ?>
                 </div>
             </div>
         </div>
         <div class="single-pro-details">
             <a href="shop.php" class="fa fa-angle-left arrow"><small class="back">Shop</small></a>
-            <h4>Kalour Professional Sketching Pencils 12pc</h4>
-            <h2>$7.00</h2>
-            <div><button class="button-28">ADD TO CART</button></div>
-            <h4>Product Details</h4>
-            <span>Premium sharpened graphite pencils for drawing (5H, 4H, 3H, 2H,HB, B, 2B, 3B, 4B, 5B, 6B, 8B).A wide variety of hardness for all your artwork needs.harder degrees for outlining (2B - 5H) and softer degrees for blending and layering (3B - 8B).Drawing Pencils enable creating lines of any thickness and color saturation.</span>
+            <?php
+            echo "<h4>$productName</h4>";
+            echo "<h2>$price</h2>";
+            echo "<div><button class='button-28'>ADD TO CART</button></div>";     //NEED TO MAKE THIS FUNCTIONAL
+            echo "<h4>Product Details</h4>";
+            echo "<span>$description</span>";
+            ?>
         </div>
     </section>
 
