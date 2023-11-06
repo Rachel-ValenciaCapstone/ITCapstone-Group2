@@ -26,11 +26,6 @@
         </ul>
     </header>
 
-    <!-- user account dropdown -->
-    <section class="sub-menu-wrap" id="subMenu">
-        <?php include('./partials/account.php') ?>
-    </section>
-
     <!-- popup login -->
     <section class="login">
         <?php include('./partials/login.php') ?>
