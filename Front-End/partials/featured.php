@@ -1,5 +1,5 @@
 <div class="pro-container">
-    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php?id=1';">
         <img src="img/products/pencil 1.jpg" alt="Kalour Professional Sketching Pencils 12pc">
         <div class="des">
             <span>kalour</span>
@@ -17,8 +17,8 @@
         <i class="material-symbols-rounded add">add_circle</i>
     </a> -->
     </div>
-    <div class="pro button-30" id="shrink-border" onclick="window.location.href='sprod.php';">
-        <img src="img/products/pen 2.jpg" alt="ARTLINE Drawing System Set of 4 ( 0.1, 0.3, 05, 0.7 ) 4PSH1">
+    <div class="pro button-30" id="shrink-border" onclick="window.location.href='sprod.php?id=2';">
+        <img src="img/products/pen 1.jpg" alt="ARTLINE Drawing System Set of 4 ( 0.1, 0.3, 05, 0.7 ) 4PSH1">
         <div class="des">
             <span>artline</span>
             <h5>Drawing System Set</h5>
@@ -35,7 +35,7 @@
         <i class="material-symbols-rounded add">add_circle</i>
     </a> -->
     </div>
-    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php?id=3';">
         <img src="img/products/acrylic 1a.jpg" alt="Acrylic Gouache Set Primaries">
         <div class="des">
             <span>liquitex</span>
@@ -53,7 +53,7 @@
         <i class="material-symbols-rounded add">add_circle</i>
     </a> -->
     </div>
-    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php?id=4';">
         <img src="img/products/oil 1.jpg" alt="Blick Studio Oil Colors">
         <div class="des">
             <span>blick studio</span>
@@ -71,7 +71,7 @@
         <i class="material-symbols-rounded add">add_circle</i>
     </a> -->
     </div>
-    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php?id=5';">
         <img src="img/products/palette 1.jpg" alt="Blick Palette Paper">
         <div class="des">
             <span>blick studio</span>
@@ -89,7 +89,7 @@
         <i class="material-symbols-rounded add">add_circle</i>
     </a> -->
     </div>
-    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php?id=6';">
         <img src="img/products/sketchbook 1.jpg" alt="Canson XL Mix Media Paper">
         <div class="des">
             <span>canson</span>
@@ -107,7 +107,7 @@
         <i class="material-symbols-rounded add">add_circle</i>
     </a> -->
     </div>
-    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.ph?id=7';">
         <img src="img/products/brush 1.jpg" alt="Utrecht Natural Chungking Pure Bristle Brush ">
         <div class="des">
             <span>utrecht</span>
@@ -125,7 +125,7 @@
         <i class="material-symbols-rounded add">add_circle</i>
     </a> -->
     </div>
-    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php?id=8';">
         <img src="img/products/palette knives 1.jpg" alt="Blick Painting Knife Set">
         <div class="des">
             <span>blick studio</span>
@@ -143,7 +143,7 @@
         <i class="material-symbols-rounded add">add_circle</i>
     </a> -->
     </div>
-    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php?id=9';">
         <img src="img/products/easel 1.jpg" alt="MEEDEN Forward Tilt Floor Easel">
         <div class="des">
             <span>meeden</span>
@@ -161,7 +161,7 @@
         <i class="material-symbols-rounded add">add_circle</i>
     </a> -->
     </div>
-    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php?id=10';">
         <img src="img/products/canvas 1.jpg" alt="MEEDEN 15-Pack Canvas Boards for Painting">
         <div class="des">
             <span>meeden</span>
