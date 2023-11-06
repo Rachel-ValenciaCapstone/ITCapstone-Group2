@@ -13,7 +13,7 @@
         <ul id="navbar">
             <li><a href="index.php" class="material-symbols-rounded" id="active">home</a></li>
             <li><a href="shop.php" class="material-symbols-rounded">store</a></li>
-            <li><a href="javascript:void(0);" onclick="toggleMenu()" class="material-symbols-rounded">account_circle</a></li>
+            <li><a href="accountdash.php" class="material-symbols-rounded">account_circle</a></li>
             <li><a href="cart.php" class="material-symbols-rounded">shopping_cart</a></li>
             <li><button id="form_open" class="material-symbols-rounded">login</button></li>
         </ul>
