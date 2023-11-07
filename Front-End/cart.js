@@ -7,13 +7,13 @@ function formats(ele, e) {
         return true;
     } else {
         return false;
-    }
-}
+    };
+};
 
 function numberValidation(e) {
     e.target.value = e.target.value.replace(/[^\d ]/g, '');
     return false;
-}
+};
 
 document.addEventListener('DOMContentLoaded', function () {
     // All initial elements
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         for (let i = 0; i < quantityElem.length; i++) {
             subtotal += Number(quantityElem[i].textContent) * Number(priceElem[i].textContent);
-        }
+        };
 
         subtotalElem.textContent = subtotal.toFixed(2);
 
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         totalElem.textContent = total.toFixed(2);
         payAmountBtn.textContent = total.toFixed(2);
-    }
+    };
 
     // Add event listeners for increment and decrement buttons
     for (let i = 0; i < incrementBtn.length; i++) {
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             totalCalc();
         });
-    }
+    };
 
     // Add event listeners to the "Remove" buttons
     removeButtons.forEach((button, index) => {
@@ -83,17 +83,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     quantityElem[index].textContent = 0; // Set quantity to 0 when removed
                 }
                 totalCalc();
-            }
+            };
         });
     });
-
-    // Automatically formats US 10 digit phone number
-    function phoneFormat(input) {
-        input = input.replace(/\D/g, '');
-        var size = input.length;
-        if (size > 0) { input = input }
-        if (size > 2) { input = input.slice(0, 3) + "-" + input.slice(3, 11) }
-        if (size > 6) { input = input.slice(0, 7) + "-" + input.slice(7) }
-        return input;
-    }
 });
+
+// Automatically formats US 10 digit phone number
+function phoneFormat(input) {
+    input = input.replace(/\D/g, '');
+    var size = input.length;
+    if (size > 0) { input = input }
+    if (size > 2) { input = input.slice(0, 3) + "-" + input.slice(3, 11) }
+    if (size > 6) { input = input.slice(0, 7) + "-" + input.slice(7) }
+    return input;
+};
