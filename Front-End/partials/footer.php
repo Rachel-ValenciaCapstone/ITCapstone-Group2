@@ -26,9 +26,9 @@
 <div class="col">
     <h4>My Account</h4>
     <i>Sign In</i>
-    <i>View Cart</i>
-    <i>My Wishlist</i>
-    <i>Track My Order</i>
+    <i>Order History</i>
+    <i>Profile Manager</i>
+    <i>Account Settings</i>
     <i>Help</i>
 </div>
 
