@@ -25,7 +25,7 @@
     </section>
 
     <!-- hero banner -->
-    <section id="hero">
+    <section id="hero" style="margin-top: 75px;">
         <h4>"Unleash Your Inner Artist,<br />One Brushstroke at a Time"</h4>
         <p>Professional Art Supplies</p>
         <a href="shop.php"><button>Shop Now</button></a>
