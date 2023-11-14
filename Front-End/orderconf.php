@@ -32,7 +32,7 @@
     </section>
 
     <!-- order confirmation section -->
-    <section class="order-confirmation">
+    <section class="order-confirmation" style="margin-top: 75px;">
         <div class="shopping-header">
             <a href="index.php" class="cart-label">Home</a>
             <span class="cart-separator">></span>
@@ -152,7 +152,7 @@
             <cite> Image by <a href="https://www.freepik.com/author/freepik">Freepik</a> (link does not work but I need to cite it)</cite>
         </div>
     </footer>
-
+    
     <script src="sprod.js"></script>
 
 </body>
