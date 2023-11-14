@@ -58,7 +58,7 @@
     ?>
     
     <!-- Changes based on the item clicked -->
-    <section id="prodetails" class="singleprod">
+    <section id="prodetails" class="singleprod" style="margin-top: 75px;">
         <div class="single-pro-image">
         <!-- main image -->
         <?php
