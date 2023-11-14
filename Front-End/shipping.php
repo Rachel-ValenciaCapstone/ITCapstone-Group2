@@ -26,7 +26,7 @@
 
     <!-- shopping cart page -->
     <!-- all links will be disabled in the future -->
-    <section class="shopping-cart">
+    <section class="shopping-cart" style="margin-top: 75px;">
         <div class="shopping-header">
             <a href="index.php" class="cart-label">Home</a>
             <span class="cart-separator">></span>
@@ -295,7 +295,10 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="cart.js"></script>
+    <script src="header.js"></script>
+
 
 </body>
 
