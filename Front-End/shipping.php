@@ -155,6 +155,16 @@
                             </div>
                         </div>
 
+                        <!-- billing info same as shipping -->
+                        
+                        <div class="billing-method">
+                            <div class="method selected">
+                                <button class="method selected">
+                                    <ion-icon class="checkmark fill" name="checkbox"></ion-icon>
+                                    <span>Billing same as shipping</span>
+                                </button>
+                            </div>
+                        </div>
                         <div class="continueBtn">
                             <button class="btn btn-secondary" type="button" onclick="location.href='cart.php';">
                                 <span>Back to Cart</span>
