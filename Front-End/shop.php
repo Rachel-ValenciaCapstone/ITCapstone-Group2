@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Palette Paradise - Shop</title>
+    <title>Palette Paradise</title>
     <?php include('./partials/header.php') ?>
-    <style>  
-        .fa {  
-            margin: 0 4px;  
-            font-size: 22px;  
+    <style>
+        .fa {
+            margin: 0 4px;
+            font-size: 22px;
             color: #47384a;
-        }  
+        }
     </style>
 </head>
 
@@ -24,14 +25,14 @@
             <li><button id="form_open" class="material-symbols-rounded">login</button></li>
         </ul>
     </header>
-    
+
     <!-- popup login -->
     <section class="login">
         <?php include('./partials/login.php') ?>
     </section>
 
     <!-- hero banner -->
-    <section id="page-header">
+    <section id="page-header" style="margin-top: 75px;">
         <h4>"Art is not what you see, but what you make others see." <br> - Edgar Degas</h4>
     </section>
 
@@ -47,7 +48,8 @@
         <div class="citations">
             <cite> Image by <a href="https://www.freepik.com/author/freepik">Freepik</a> (link does not work but I need to cite it)</cite>
         </div>
-    </footer>    
+    </footer>
 
 </body>
+
 </html>
