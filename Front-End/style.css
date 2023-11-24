@@ -776,16 +776,16 @@ small.back:hover {
     padding: 0 50px;
 }
 
-.dash-header {
-    padding: 24px 32px;
+.main-dash {
+    padding: 25px 35px;
     width: 100%;
 }
 
-.dash-header span {
+.main-dash span {
     font-size: 18px;
 }
 
-.dash-header h3 {
+.main-dash h3 {
     margin: 20px 0;
     /* margin-top: 20px; */
     color: rgb(68, 68, 68);
@@ -793,7 +793,8 @@ small.back:hover {
     /* border-bottom: 1px solid gainsboro; */
 }
 
-.dash-order-history {
+.dash-order-history,
+.dash-profile-manager {
     padding: 0 30px;
 }
 
@@ -801,7 +802,7 @@ small.back:hover {
     margin: 0 auto 40px;
     /* justify-content: center;
     align-items: center; */
-    width: 55%;
+    width: 50%;
     padding: 20px 30px;
     border-radius: 15px;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
@@ -812,6 +813,10 @@ small.back:hover {
     border: 1px solid gainsboro;
 } */
 
+.order-list #order_date {
+    padding: 10px 20px 0;
+}
+
 .order-list-detail {
     display: block;
 }
@@ -819,6 +824,10 @@ small.back:hover {
 .order-list-detail p,
 .order-list-detail span {
     font-family: 'Roboto Mono', monospace;
+}
+
+.order-list .input-flex {
+    justify-content: center;
 }
 
 .detail-header {
@@ -832,82 +841,45 @@ small.back:hover {
     bottom: -8px;
 }
 
-.left-detail {
+.order-detail {
     padding-left: 10px;
+    padding-right: 60px;
 }
 
-.right-detail {
-    padding-left: 40px;
+.order-detail a {
+    color: #47384a;
+    /* font-weight: bold; */
 }
 
-/* CSS */
-.button-86 {
-  all: unset;
-  width: 70px;
-  height: 30px;
-  font-size: 16px;
-  background: transparent;
-  border: none;
-  position: relative;
-  bottom: -10px;
-  color: #f0f0f0;
-  cursor: pointer;
-  z-index: 1;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+.dash-profile-manager label {
+    color: #47384a;
 }
 
-.button-86::after,
-.button-86::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -99999;
-  transition: all .4s;
+.profile-header {
+    padding-left: 180px;
 }
 
-.button-86::before {
-  transform: translate(0%, 0%);
-  width: 100%;
-  height: 100%;
-  background: #28282d;
-  border-radius: 10px;
+.profile-header h4 {
+    padding-right: 30px;
+    border-right: 1px solid gainsboro;
+    line-height: 200px;
 }
 
-.button-86::after {
-  transform: translate(10px, 10px);
-  width: 35px;
-  height: 35px;
-  background: #ffffff15;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border-radius: 50px;
+.profile-dash input:read-only {
+    border-radius: 5px;
+    border: 1px solid #5d5d5d;
+    color: #969696;
+    background-color: #b9b2cb5a;
+    padding: 5px 10px;
+    margin: 0 0 10px 5px;
+
 }
 
-.button-86:hover::before {
-  transform: translate(5%, 20%);
-  width: 110%;
-  height: 110%;
-}
+/* input:read-only:not(:last-child) {
+    margin-bottom: 20px;
+} */
 
-.button-86:hover::after {
-  border-radius: 10px;
-  transform: translate(0, 0);
-  width: 100%;
-  height: 100%;
-}
 
-.button-86:active::after {
-  transition: 0s;
-  transform: translate(0, 5%);
-}
 
 
 
@@ -1141,6 +1113,12 @@ small.back:hover {
     background: #f5f3f5;
     border-radius: 10px;
     color: grey;
+    transition: 0.2s ease-in-out;
+}
+
+.input-default input:focus {
+    color: #a878cc;
+
 }
 
 .payment-form input {
@@ -1374,6 +1352,39 @@ select#expire-date {
     border-top: 1px solid gainsboro;
 }
 
+/* billing checkbox */
+
+
+.billing-method .method {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.billing-method .selected {
+    border-color: #d0ace0;
+}
+
+.billing-method .method ion-icon {
+    font-size: 20px;
+}
+
+.billing-method .method .checkmark {
+    margin-left: auto;
+    color: #47384a;
+}
+
+.billing-method .method .fill {
+    color: #d0ace0;
+}
+
+.billing-method span {
+    font-size: 16px;
+    color: #41403e;
+}
+
 /* order confirmation page */
 
 .order-confirmation {
@@ -1512,6 +1523,7 @@ footer .follow i {
     color: #47384a;
     padding-right: 4px;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 
 footer .install .row img {
