@@ -152,7 +152,7 @@
             <cite> Image by <a href="https://www.freepik.com/author/freepik">Freepik</a> (link does not work but I need to cite it)</cite>
         </div>
     </footer>
-    
+
     <script src="sprod.js"></script>
 
 </body>
