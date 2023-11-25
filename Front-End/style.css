@@ -107,7 +107,7 @@ input {
 }
 
 .header.scrollUp {
-    transform: translateY(-75px);  
+    transform: translateY(-75px);
 }
 
 #navbar {
@@ -491,7 +491,7 @@ input[type=radio]:checked {
     border-radius: 25px;
     cursor: pointer;
     margin: 15px 0;
-    transition: 0.2 ease;
+    transition: 0.2s ease;
     position: relative;
 }
 
@@ -774,11 +774,11 @@ small.back:hover {
 .dashboard {
     /* margin: 30px; */
     padding: 0 50px;
+    width: 100%;
 }
 
 .main-dash {
     padding: 25px 35px;
-    width: 100%;
 }
 
 .main-dash span {
@@ -794,7 +794,8 @@ small.back:hover {
 }
 
 .dash-order-history,
-.dash-profile-manager {
+.dash-account-details,
+.dash-more-settings {
     padding: 0 30px;
 }
 
@@ -851,37 +852,79 @@ small.back:hover {
     /* font-weight: bold; */
 }
 
-.dash-profile-manager label {
+.dash-account-details label {
     color: #47384a;
 }
 
-.profile-header {
-    margin: 0 200px;
-    /* position: relative;
-    justify-content: center; */
+.account-info {
+    margin: 20px auto;
+    width: 60%;
 }
 
-
-.profile-header h4 {
-    padding-right: 50px;
-    border-right: 1px solid gainsboro;
-    line-height: 200px;
+.account-info h4 {
+    line-height: 60px;
 }
 
-.user-detail {
-    padding-left: 40px;
+.account-info div,
+.account-info p {
+    width: 70%;
+    margin: 10px auto;
 }
 
-.profile-dash input:read-only {
+.account-info p {
+    font-size: 17px;
+}
+
+.account-dash input:read-only {
     border-radius: 5px;
     border: 1px solid #5d5d5d;
     color: #969696;
-    background-color: #b9b2cb5a;
-    padding: 5px 20px;
-    /* margin: 0 auto 5px; */
-
+    /* background-color: #b9b2cb5a; */
+    padding: 5px 10px;
+    margin: 2px auto 7px;
+    line-height: normal;
+    font-size: 17px;
 }
 
+.settings-options {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.settings-options h4 {
+    line-height: 60px;
+}
+
+.settings-options p,
+.settings-options div {
+    width: 70%;
+    margin: 10px auto;
+}
+
+.settings-options p,
+.settings-options span {
+    font-size: 17px;
+}
+
+.settings-options p {
+    padding-bottom: 10px;
+}
+
+.settings-options .method .checkmark {
+    color: #47384a;
+}
+
+.settings-options .selected {
+    border-color: #d0ace0;
+}
+
+.settings-options .method .fill {
+    color: #d0ace0;
+}
+
+.settings-options div {
+    padding-left: 15px;
+}
 
 /* shopping cart page */
 
