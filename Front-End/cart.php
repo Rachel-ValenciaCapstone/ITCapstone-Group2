@@ -57,12 +57,12 @@
 
                     <form action="shipping.php">
                         <div class="cardholder-name">
-                            <label for="" class="label-default">Cardholder Name</label>
+                            <label for="cardholder-name" class="label-default">Cardholder Name</label>
                             <input type="text" name="cardholder-name" id="cardholder-name" class="input-default" required>
                         </div>
 
                         <div class="card-number">
-                            <label for="" class="label-default">Card Number</label>
+                            <label for="card-number" class="label-default">Card Number</label>
                             <input type="text" name="card-number" id="card-number" class="input-default" onkeypress='return formats(this,event)' onkeyup="return numberValidation(event)" required>
                         </div>
 
