@@ -150,13 +150,13 @@
                                 <input type="tel" name="phone" id="phone" class="input-default" onInput="this.value = phoneFormat(this.value)" required />
                             </div>
                             <div style="width: 60%;">
-                                <label for="semail" class="label-default">Email</label>
+                                <label for="email" class="label-default">Email</label>
                                 <input type="email" id="email" class="input-default" required />
                             </div>
                         </div>
 
                         <!-- billing info same as shipping -->
-                        
+
                         <div class="billing-method">
                             <div class="method selected">
                                 <button class="method selected">
@@ -308,7 +308,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="cart.js"></script>
     <script src="header.js"></script>
-
 
 </body>
 
