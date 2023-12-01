@@ -107,7 +107,7 @@
         <i class="material-symbols-rounded add">add_circle</i>
     </a> -->
     </div>
-    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.ph?id=7';">
+    <div class="pro" id="shrink-border" onclick="window.location.href='sprod.php';">
         <img src="img/products/brush 1.jpg" alt="Utrecht Natural Chungking Pure Bristle Brush ">
         <div class="des">
             <span>utrecht</span>
