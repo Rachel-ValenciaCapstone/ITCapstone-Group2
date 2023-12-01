@@ -1,12 +1,24 @@
+<?php
+session_start();
+/* Looks to check whether you are logged in continuing to checkout */
+if(isset($_SESSION["user_id"])) {
+    $user_id = $_SESSION['user_id'];
+} else {
+    $user_id="0";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>Palette Paradise</title>
     <?php include('./partials/header.php') ?>
+
+  
 </head>
 
-<body>
+<body>  
 
     <header class="header">
         <a href="index.php"><img src="img/logo.png" class="logo" alt="logo" /></a>
@@ -27,13 +39,13 @@
     <!-- shopping cart page -->
     <section class="shopping-cart" style="margin-top: 75px;">
         <div class="shopping-header">
-            <a href="index.php" class="cart-label">Home</a>
+            <a class="cart-label">Home</a>
             <span class="cart-separator">></span>
-            <a href="cart.php" class="cart-label-active">Cart</a>
+            <a class="cart-label-active">Cart</a>
             <span class="cart-separator">></span>
-            <a href="shipping.php" class="cart-label">Shipping</a>
+            <a class="cart-label">Shipping</a>
             <span class="cart-separator">></span>
-            <a href="#" class="cart-label">Order Confirmation</a>
+            <a class="cart-label">Order Confirmation</a>
         </div>
 
         <div class="item-flex">
@@ -55,22 +67,22 @@
                         </button>
                     </div>
 
-                    <form action="shipping.php">
+                    <form action="shipping.php" method='post' >
                         <div class="cardholder-name">
                             <label for="cardholder-name" class="label-default">Cardholder Name</label>
-                            <input type="text" name="cardholder-name" id="cardholder-name" class="input-default" required>
+                            <input type="text" name="cardholderName" id="cardholderName" class="input-default" required>
                         </div>
 
                         <div class="card-number">
                             <label for="card-number" class="label-default">Card Number</label>
-                            <input type="text" name="card-number" id="card-number" class="input-default" onkeypress='return formats(this,event)' onkeyup="return numberValidation(event)" required>
+                            <input type="text" name="cardNumber" id="cardNumber" class="input-default" onkeypress='return formats(this,event)' onkeyup="return numberValidation(event)" required>
                         </div>
 
                         <div class="input-flex">
                             <div class="expire-date">
                                 <label for="expire-date" class="label-default">Expiration Date</label>
                                 <div class="input-flex">
-                                    <select name="month" id="expire-date" class="input-default">
+                                    <select name="expireMonth" id="expireDate" class="input-default">
                                         <option selected>MM</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -85,8 +97,8 @@
                                         <option>11</option>
                                         <option>12</option>
                                     </select>
-                                    /
-                                    <select name="year" id="expire-date" class="input-default">
+                                    
+                                    <select name="expYear" id="expYear" class="input-default">
                                         <option selected>YY</option>
                                         <option>23</option>
                                         <option>24</option>
@@ -114,7 +126,7 @@
                                 <input type="number" name="cvv" id="cvv" class="input-default" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" required>
                             </div>
                         </div>
-
+                        
                         <div class="continueBtn">
                             <button class="btn btn-secondary" type="button" onclick="location.href='index.php';">
                                 <span>Return to Home</span>
@@ -126,72 +138,12 @@
                     </form>
                 </div>
             </section>
-
             <!-- cart section -->
             <section class="cart">
                 <div class="cart-item-box">
                     <h3 class="section-heading">Order Summary</h3>
 
-                    <div class="product-card">
-                        <div class="card">
-                            <div class="img-box">
-                                <img src="img/products/pencil 1.jpg" alt="Kalour Professional Sketching Pencils 12pc" width="120px" class="summary-img">
-                            </div>
-
-                            <div class="detail">
-                                <h4 class="product-name">Kalour Professional Sketching Pencils</h4>
-                                <div class="wrapper">
-                                    <div class="product-qty">
-                                        <button id="decrement">
-                                            <ion-icon name="remove-outline"></ion-icon>
-                                        </button>
-                                        <span id="quantity">1</span>
-                                        <button id="increment">
-                                            <ion-icon name="add-outline"></ion-icon>
-                                        </button>
-                                    </div>
-                                    <div class="price">
-                                        $ <span id="price">7.00</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <button class="product-close-btn">
-                                <ion-icon name="trash-outline"></ion-icon>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="card">
-                            <div class="img-box">
-                                <img src="img/products/pen 1.jpg" alt="ARTLINE Drawing System Set of 4" width="120px" class="summary-img">
-                            </div>
-
-                            <div class="detail">
-                                <h4 class="product-name">ARTLINE Drawing System</h4>
-                                <div class="wrapper">
-                                    <div class="product-qty">
-                                        <button id="decrement">
-                                            <ion-icon name="remove-outline"></ion-icon>
-                                        </button>
-                                        <span id="quantity">1</span>
-                                        <button id="increment">
-                                            <ion-icon name="add-outline"></ion-icon>
-                                        </button>
-                                    </div>
-                                    <div class="price">
-                                        $ <span id="price">11.00</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <button class="product-close-btn" id="remove">
-                                <ion-icon name="trash-outline"></ion-icon>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                    <div id='cartSummary'></div>
 
                 <div class="wrapper">
                     <div class="discount-token">
@@ -204,23 +156,17 @@
 
                     <div class="amount">
                         <div class="subtotal">
-                            <span>Subtotal</span> <span>$ <span id="subtotal">18.00</span></span>
+                            <span>Subtotal</span> <span> <span id="subtotal">0.00</span></span>
                         </div>
                         <div class="shipping">
-                            <span>Shipping fee</span> <span>$ <span id="shipping">0.00</span></span>
+                            <span>Shipping fee</span> <span> $<span id="shipping">0.00</span></span>
                         </div>
                         <div class="tax">
-                            <span>Sales tax</span> <span>$ <span id="tax">1.17</span></span>
+                            <span>Sales tax</span> <span> <span id="tax">0.00</span></span>
                         </div>
                         <div class="total">
-                            <span>Grand total</span> <span>$ <span id="total">19.17</span></span>
+                            <span>Grand total</span> <span> <span id="total">0.00</span></span>
                         </div>
-                        <!-- <div class="shipping">
-                            <span>Shipping</span> <span>$ <span id="shipping">6.99</span></span>
-                        </div>
-                        <div class="total">
-                            <span>Total</span> <span>$ <span id="total">26.16</span></span>
-                        </div> -->
                     </div>
                 </div>
             </section>
@@ -284,9 +230,20 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="cart.js"></script>
     <script src="header.js"></script>
+    <script src="cart.js?v=9"></script>
+    <script src="cart_v2.js?v=18"></script>
 
+    <script>
+        //Prompts a pop-up login box to view cart page and enter payment details.
+        const userId = "<?php echo $user_id?>";
+
+        if(userId==="0")
+        {
+            $("#mainForm").hide();    
+            login.classList.add("show");
+        }
+    </script>
 </body>
 
 </html>
