@@ -19,7 +19,17 @@ SmallImg[3].onclick = function() {
 let btn = document.querySelector('.button-28');
 
 btn.addEventListener("click",()=>{
+  console.log("additemToCart")
   if(btn.innerText == 'ADD TO CART') {
+
+    const queryString = window.location.search;   // Gets current URL (aka ID number)
+    const urlParams = new URLSearchParams(queryString);  // Searches for all params that need to be passed in 
+    const productId = urlParams.get('id');   // now finds param (in this case, id) 
+    const price=document.getElementById("price"+productId).innerHTML;
+    const prodName = document.getElementById("prodName"+productId).innerHTML;
+    const mainImage = document.getElementById("mainImage").value;
+    additemToCart({productId:parseInt(productId), price:parseFloat(price), quantity:1, prodName:prodName, mainImage:mainImage})
+    
       btn.innerText = 'ADDED TO CART';
   } else {
     btn.innerText = 'ADD TO CART';
