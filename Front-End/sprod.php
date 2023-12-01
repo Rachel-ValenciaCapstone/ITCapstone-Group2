@@ -1,3 +1,8 @@
+<?php
+// Start a session to keep the user logged in
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,29 +67,28 @@
         <div class="single-pro-image">
         <!-- main image -->
         <?php
-            echo "<img src='img/products/$mainImage'" . 'width="100%" id="MainImg" alt="CHANGE THIS Kalour Professional Sketching Pencils 12pc">';      // CHANGE THIS TO PHP
+            echo "<img src='img/products/$mainImage'" . 'width="100%" id="MainImg" alt="">';
         ?>
-        </div>
             <!-- small images -->
             <div class="small-img-group">
                 <div class="small-img-col">
                 <?php    
-                    echo "<img src='img/products/$image1'" . 'width="100%" class="small-img" alt="CHANGE THIS Kalour Professional Sketching Pencils 12pc">';        // CHANGE THIS TO PHP
+                    echo "<img src='img/products/$image1'" . 'width="100%" class="small-img" alt="">';
                 ?>
                 </div>
                 <div class="small-img-col">
                 <?php  
-                    echo "<img src='img/products/$image2'" . 'width="100%" class="small-img" alt="CHANGE THIS Kalour Professional Sketching Pencils 12pc">';        // CHANGE THIS TO PHP
+                    echo "<img src='img/products/$image2'" . 'width="100%" class="small-img" alt="">';
                 ?>
                 </div>
                 <div class="small-img-col">
                 <?php
-                    echo "<img src='img/products/$image3'" . 'width="100%" class="small-img" alt="CHANGE THIS Kalour Professional Sketching Pencils 12pc">';
+                    echo "<img src='img/products/$image3'" . 'width="100%" class="small-img" alt="">';
                 ?>
                 </div>
                 <div class="small-img-col">
                 <?php
-                    echo "<img src='img/products/$image4'" . 'width="100%" class="small-img" alt="CHANGE THIS Kalour Professional Sketching Pencils 12pc">';
+                    echo "<img src='img/products/$image4'" . 'width="100%" class="small-img" alt="">';
                 ?>
                 </div>
             </div>
@@ -92,9 +96,10 @@
         <div class="single-pro-details">
             <a href="shop.php" class="fa fa-angle-left arrow"><small class="back">Shop</small></a>
             <?php
-            echo "<h4>$productName</h4>";
-            echo "<h2>$price</h2>";
-            echo "<div><button class='button-28'>ADD TO CART</button></div>";     //NEED TO MAKE THIS FUNCTIONAL
+            echo "<h4 id='prodName$item'>$productName</h4>";
+            echo "<h2 id='price$item'>$price</h2>";                                                                       
+            echo "<input type='hidden' id='mainImage' value ='$mainImage'/>";
+            echo "<div><button class='button-28' id='add_to_cart' name='add_to_cart'>ADD TO CART</button></div>";
             echo "<h4>Product Details</h4>";
             echo "<span>$description</span>";
             ?>
@@ -116,6 +121,7 @@
     </footer>    
 
     <script src="sprod.js"></script>
+    <script src="cart_v2.js"></script>
     
 </body>
 </html>
