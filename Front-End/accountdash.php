@@ -1,3 +1,9 @@
+<?php
+// Start a session to keep the user logged in
+session_start();
+//$user_id = $_SESSION['user_id'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,8 +57,8 @@
 
                                 <div class="order-list-detail input-flex">
                                     <div class="order-detail">
-                                        <!-- generate order number in invrements of 1 using id="order_id" -->
-                                        <a href="orderconf.php" target="_blank"><span class="detail-header">Order ID: <span id="order_num">00000001</span></span></a><br>
+                                        <!-- generate order number in increments of 1 using id="order_id" -->
+                                        <a href="history1.php" target="_blank"><span class="detail-header">Order ID: <span id="order_num">00000001</span></span></a><br>
                                         <span class="sub-detail">Items ordered: <span id="num_items">2</span></span><br>
                                         <!-- ID same as cart, shipping & order confirmation page -->
                                         <span class="sub-detail">Total: $<span id="total">19.17</span></span><br>
@@ -71,7 +77,7 @@
                                 <div class="order-list-detail input-flex">
                                     <div class="order-detail">
                                         <!-- generate order number in invrements of 1 using id="order_id" -->
-                                        <a href="orderconf.php" target="_blank"><span class="detail-header">Order ID: <span id="order_num">00000002</span></span></a><br>
+                                        <a href="history2.php" target="_blank"><span class="detail-header">Order ID: <span id="order_num">00000002</span></span></a><br>
                                         <span class="sub-detail">Items ordered: <span id="num_items">1</span></span><br>
                                         <!-- ID same as cart, shipping & order confirmation page -->
                                         <span class="sub-detail">Total: $<span id="total">79.88</span></span><br>
