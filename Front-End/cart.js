@@ -17,11 +17,11 @@ function numberValidation(e) {
 
 document.addEventListener('DOMContentLoaded', function () {
     // All initial elements
-    const payAmountBtn = document.querySelector('#payAmount');
-    const decrementBtn = document.querySelectorAll('#decrement');
-    const incrementBtn = document.querySelectorAll('#increment');
+    const decrementBtn = document.querySelectorAll('.decrement');
+    const incrementBtn = document.querySelectorAll('.increment');
     const quantityElem = document.querySelectorAll('#quantity');
     const priceElem = document.querySelectorAll('#price');
+    const lineElem = document.querySelectorAll('#linetotal');  
     const subtotalElem = document.querySelector('#subtotal');
     const taxElem = document.querySelector('#tax');
     const totalElem = document.querySelector('#total');
@@ -56,8 +56,13 @@ document.addEventListener('DOMContentLoaded', function () {
         incrementBtn[i].addEventListener('click', function () {
             let increment = Number(this.previousElementSibling.textContent);
             increment++;
-
+            console.log("incrementBtn", this.id);
             this.previousElementSibling.textContent = increment;
+            const $cart_id = (this.id+"").split("-")[1];
+            console.log("CartID:", $cart_id);
+            const $temp_quantity = quantityElem[i].textContent;
+            const $cart_quantity = $temp_quantity;
+            updatecart($cart_id, $cart_quantity);
 
             totalCalc();
         });
@@ -65,9 +70,14 @@ document.addEventListener('DOMContentLoaded', function () {
         decrementBtn[i].addEventListener('click', function () {
             let decrement = Number(this.nextElementSibling.textContent);
             decrement = decrement <= 1 ? 1 : decrement - 1;
+v            console.log("decrementBtn", this.id);
 
+            const $cart_id = (this.id+"").split("-")[1];
+            console.log("CartID:", $cart_id);
             this.nextElementSibling.textContent = decrement;
-
+            const $temp_quantity = quantityElem[i].textContent;
+            const $cart_quantity = $temp_quantity;
+            updatecart($cart_id, $cart_quantity);
             totalCalc();
         });
     }
