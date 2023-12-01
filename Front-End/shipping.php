@@ -204,16 +204,16 @@ $user_id = isset($_SESSION['user_id'])?$_SESSION['user_id']:0;
 
                     <div class="amount">
                         <div class="subtotal">
-                            <span>Subtotal</span> <span>$ <span id="subtotal">0.00</span></span>
+                            <span>Subtotal</span> <span> <span id="subtotal">0.00</span></span>
                         </div>
                         <div class="shipping">
-                            <span>Shipping fee</span> <span>$ <span id="shipping">0.00</span></span>
+                            <span>Shipping fee</span> <span>$<span id="shipping">0.00</span></span>
                         </div>
                         <div class="tax">
-                            <span>Sales tax</span> <span>$ <span id="tax">0.00</span></span>
+                            <span>Sales tax</span> <span> <span id="tax">0.00</span></span>
                         </div>
                         <div class="total">
-                            <span>Grand total</span> <span>$ <span id="total">0.00</span></span>
+                            <span>Grand total</span> <span> <span id="total">0.00</span></span>
                         </div>
                     </div>
                 </div>
