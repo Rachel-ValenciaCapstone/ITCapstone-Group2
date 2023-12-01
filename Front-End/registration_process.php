@@ -22,7 +22,7 @@ if (!preg_match("/[a-z]/i", $_POST["password"])) {
 }
   
 //Ensures the password contains at least one number.
-if (!preg_match("/[0-9]/i", $_POST["password"])) {                            //EVENTUALLY NEED TO INCLUDE REMAINING PASSWORD REQUIREMENTS.
+if (!preg_match("/[0-9]/i", $_POST["password"])) {                            
     die("Password must contain at least one number");
 }
 
@@ -39,7 +39,7 @@ $mysqli = require __DIR__ . "/database_handler.php";
 
 //Inserts the data entered into the database.
 $sql = "INSERT INTO user (email, password_hash)    
-        VALUES (?, ?)";                                                 //SWAP USERS2 for the actual field name. 
+        VALUES (?, ?)";                                                 
 
 // Create a new prepared statement??? - UNSURE WHAT THIS MEANS.
 $stmt = $mysqli->stmt_init();
@@ -64,7 +64,7 @@ if ($stmt->execute()) {
     header("Location: index.php"); 
 } else {
     if($mysqli->errno === 1062) {
-        die("This email is already associated with an account.");     //THiS DOES NOT APPEAR TO BE WORKING -_-
+        die("This email is already associated with an account.");     
     } else {
     die($mysqli->error . " " . $mysqli->errorno);
     }
