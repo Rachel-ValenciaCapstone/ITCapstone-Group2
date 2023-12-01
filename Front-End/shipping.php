@@ -1,9 +1,19 @@
+<?php
+session_start();
+/* Retains the user_id in session to allow the user to complete checkout. */
+$user_id = isset($_SESSION['user_id'])?$_SESSION['user_id']:0;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>Palette Paradise</title>
     <?php include('./partials/header.php') ?>
+
+    <script>
+        const userId = <?php echo $user_id?>
+    </script>
 </head>
 
 <body>
@@ -28,13 +38,13 @@
     <!-- all links will be disabled in the future -->
     <section class="shopping-cart" style="margin-top: 75px;">
         <div class="shopping-header">
-            <a href="index.php" class="cart-label">Home</a>
+        <a class="cart-label">Home</a>
             <span class="cart-separator">></span>
-            <a href="cart.php" class="cart-label">Cart</a>
+            <a class="cart-label">Cart</a>
             <span class="cart-separator">></span>
-            <a href="shipping.php" class="cart-label-active">Shipping</a>
+            <a class="cart-label-active">Shipping</a>
             <span class="cart-separator">></span>
-            <a href="orderconf.php" class="cart-label">Order Confirmation</a>
+            <a class="cart-label">Order Confirmation</a>
         </div>
 
         <div class="item-flex">
@@ -56,20 +66,20 @@
                         </button>
                     </div>
 
-                    <form action="orderconf.php">
+                    <form action="orderconf.php" method='post' onSubmit='return shipSubmit(this)' id='mainForm'>
                         <div class="card-number">
-                            <label for="full-name" class="label-default">Full Name</label>
-                            <input type="text" name="full-name" id="full-name" class="input-default" required>
+                            <label for="fullName" class="label-default">Full Name</label>
+                            <input type="text" name="fullName" id="fullName" class="input-default" required>
                         </div>
 
                         <div class="card-number">
                             <label for="" class="label-default">Address Line 1</label>
-                            <input type="text" name="address-1" id="address-1" class="input-default" required>
+                            <input type="text" name="address1" id="address1" class="input-default" required>
                         </div>
 
                         <div class="card-number">
                             <label for="" class="label-default">Address Line 2</label>
-                            <input type="text" name="address-2" id="address-2" class="input-default">
+                            <input type="text" name="address2" id="address2" class="input-default">
                         </div>
 
                         <div class="card-number">
@@ -169,7 +179,7 @@
                             <button class="btn btn-secondary" type="button" onclick="location.href='cart.php';">
                                 <span>Back to Cart</span>
                             </button>
-                            <button class="btn btn-primary" type="submit">
+                            <button class="btn btn-primary" type="submit" onClick='checkout(userId)'>
                                 <span>Submit Order</span>
                             </button>
                         </div>
@@ -181,67 +191,29 @@
             <section class="cart" style="height: 30%;">
                 <div class="cart-item-box">
                     <h3 class="section-heading">Order Summary</h3>
-
-                    <div class="product-card">
-                        <div class="card">
-                            <div class="img-box">
-                                <img src="img/products/pencil 1.jpg" alt="Kalour Professional Sketching Pencils 12pc" width="120px" class="summary-img">
-                            </div>
-
-                            <div class="detail">
-                                <h4 class="product-name">Kalour Professional Sketching Pencils</h4>
-                                <div class="wrapper">
-                                    <div class="product-qty">
-                                        x <span id="quantity">1</span>
-                                    </div>
-
-                                    <div class="price">
-                                        $ <span id="price">7.00</span>
+                        <div id='cartSummary'></div>
+                    
+                          <div class="wrapper">
+                            <div class="discount-token">
+                                <label for="token" class="label-default">Gift card/Discount code</label>
+                                    <div class="wrapper-flex">
+                                        <input type="text" name="discount-token" id="discount-token" class="input-default">
+                                        <button class="btn btn-outline">Apply</button>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="card">
-                            <div class="img-box">
-                                <img src="img/products/pen 1.jpg" alt="ARTLINE Drawing System Set of 4" width="120px" class="summary-img">
-                            </div>
-
-                            <div class="detail">
-                                <h4 class="product-name">ARTLINE Drawing System</h4>
-                                <div class="wrapper">
-                                    <div class="product-qty">
-                                        x <span id="quantity">1</span>
-                                    </div>
-
-                                    <div class="price">
-                                        $ <span id="price">11.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="wrapper">
-                    <div class="discount-token" name="discount-token" id="discount-token">
-                        <p>Gift card/Discount code applied: None</p>
-                    </div>
 
                     <div class="amount">
                         <div class="subtotal">
-                            <span>Subtotal</span> <span>$ <span id="subtotal">18.00</span></span>
+                            <span>Subtotal</span> <span>$ <span id="subtotal">0.00</span></span>
                         </div>
                         <div class="shipping">
                             <span>Shipping fee</span> <span>$ <span id="shipping">0.00</span></span>
                         </div>
                         <div class="tax">
-                            <span>Sales tax</span> <span>$ <span id="tax">1.17</span></span>
+                            <span>Sales tax</span> <span>$ <span id="tax">0.00</span></span>
                         </div>
                         <div class="total">
-                            <span>Grand total</span> <span>$ <span id="total">19.17</span></span>
+                            <span>Grand total</span> <span>$ <span id="total">0.00</span></span>
                         </div>
                     </div>
                 </div>
@@ -307,6 +279,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="cart.js"></script>
+    <script src="cart_v2.js?v=2"></script>
     <script src="header.js"></script>
 
 </body>
