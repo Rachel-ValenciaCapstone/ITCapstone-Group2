@@ -1143,6 +1143,8 @@ input::-webkit-inner-spin-button {
 
 .card .summary-img {
     border-radius: 5px;
+    height:100px;
+    width:100px;
 }
 
 .card .detail .product-name {
