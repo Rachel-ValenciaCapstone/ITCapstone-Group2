@@ -1,3 +1,8 @@
+<?php
+// Start a session to keep the user logged in
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
