@@ -1,3 +1,7 @@
+<?php
+session_start();
+extract($_REQUEST);
+?> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,18 +38,18 @@
     <!-- order confirmation section -->
     <section class="order-confirmation" style="margin-top: 75px;">
         <div class="shopping-header">
-            <a href="index.php" class="cart-label">Home</a>
+            <a class="cart-label">Home</a>
             <span class="cart-separator">></span>
-            <a href="cart.php" class="cart-label">Cart</a>
+            <a class="cart-label">Cart</a>
             <span class="cart-separator">></span>
-            <a href="shipping.php" class="cart-label">Shipping</a>
+            <a class="cart-label">Shipping</a>
             <span class="cart-separator">></span>
-            <a href="orderconf.php" class="cart-label-active">Order Confirmation</a>
+            <a class="cart-label-active">Order Confirmation</a>
         </div>
 
         <div class="orderconf-header">
             <!-- <h1>Thank you!</h1> -->
-            <img src="./img/hero 3.jpg" alt="Thank You Banner Image">
+            <img src="./img/hero 3.jpeg" alt="Thank You Banner Image">
             <h3>We've received your order!</h3>
             <p>Thank you for your order. You will receive an order number and confirmation email shortly. Don't forget to check your spam folder!</p>
         </div>
@@ -56,9 +60,9 @@
                     <span class="material-symbols-rounded">pin_drop</span>
                     <h4 style="font-size: 23px;">Shipping Address</h4>
                 </div>
-                <h4>Customer Name</h4>
-                <p id="address" style="margin-bottom: 0;">1234 Anywhere Dr. <br> City, State Unitied States 98765</p> <!-- needs to be connect to retreive info from database -->
-                <p id="phone" style="margin-top: 0;">###-###-####</p> <!-- same id as on shipping.php -->
+                <h4><?php echo $fullName?></h4>
+                <p id="address" style="margin-bottom: 0;"><?php echo $address1?> <br> <?php echo "$city, $state, $zip"?></p> 
+                <p id="phone" style="margin-top: 0;"><?php echo $phone?></p> 
             </div>
 
             <div class="billing-info">
@@ -66,9 +70,9 @@
                     <span class="material-symbols-rounded">credit_card</span>
                     <h4 style="font-size: 23px;">Billing Information</h4>
                 </div>
-                <h4>Customer Name</h4>
-                <p id="address" style="margin-bottom: 0;">1234 Anywhere Dr. <br> City, State Unitied States 98765</p> <!-- needs to be connect to retreive info from database -->
-                <p id="phone" style="margin-top: 0;">###-###-####</p> <!-- same id as on shipping.php -->
+                <h4><?php echo $fullName?></h4>
+                <p id="address" style="margin-bottom: 0;"><?php echo $address1?> <br> <?php echo "$city, $state, $zip"?></p> 
+                <p id="phone" style="margin-top: 0;"><?php echo $phone?></p> 
             </div>
 
             <div class="shipping-method">
@@ -119,19 +123,16 @@
 
                     <div class="amount" style="padding: 0;">
                         <div class="subtotal">
-                            <span>Subtotal</span> <span>$ <span id="subtotal">18.00</span></span>
+                            <span>Subtotal</span> <span> <span id="subtotal">0.00</span></span>
                         </div>
                         <div class="shipping">
-                            <span>Shipping fee</span> <span>$ <span id="shipping">0.00</span></span>
-                        </div>
-                        <div class="discount">
-                            <span>Discount</span> <span>$ <span name="discount-token" id="discount-token">0.00</span></span>
+                            <span>Shipping fee</span> <span>$<span id="shipping">0.00</span></span>
                         </div>
                         <div class="tax">
-                            <span>Sales tax</span> <span>$ <span id="tax">1.17</span></span>
+                            <span>Sales tax</span> <span> <span id="tax">0.00</span></span>
                         </div>
                         <div class="total">
-                            <span>Grand total</span> <span>$ <span id="total">19.17</span></span>
+                            <span>Grand total</span> <span> <span id="total">0.00</span></span>
                         </div>
                     </div>
                 </div>
@@ -154,7 +155,8 @@
     </footer>
 
     <script src="sprod.js"></script>
-
+    <script src="cart.js"></script>
+    <script src="cart_v2.js"></script>
 </body>
 
 </html>
