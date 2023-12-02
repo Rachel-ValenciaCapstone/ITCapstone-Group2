@@ -21,14 +21,14 @@ session_start();//
         }
         $tax = $total * .065;
         $total += $tax + 6.99;
-        $insertOrder = "INSERT INTO orders(user_id, order_date, total_amount, status) VALUES(?,SYSDATE(),?,0)";
+        $insertOrder = "INSERT INTO orders1(user_id, order_date, total_amount, status) VALUES(?,SYSDATE(),?,0)";
         $stmt = $mysqli->prepare($insertOrder);
         $stmt->bind_param("ss", $userId, $total);
         $stmt->execute();
         $orderId = mysqli_insert_id($mysqli);
 
 
-        $insertOrderDetail = "INSERT INTO order_items(order_id, product_id, quantity, subtotal) VALUES(?,?,?,?)";
+        $insertOrderDetail = "INSERT INTO order1_items(order_id, product_id, quantity, subtotal) VALUES(?,?,?,?)";
         
         foreach ($cart as $item)
         {
